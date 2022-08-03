@@ -45,8 +45,8 @@ Después de ejecutar, deberíamos ver algo así
 
 
 
-- ```src``` contiene todos los archivos principales para nuestro proyecto
-- En la carpeta public se encuentra el archivo html principal ```index.html```. Este puede ser modificado como cualquier archivo ```.html```.
+- ```src``` contiene todos los archivos esenciales para nuestro proyecto
+- En la carpeta public se encuentra el archivo html incial ```index.html```. Este puede ser modificado como cualquier archivo ```.html```.
 
 1. Directorio ```src```
 
@@ -83,7 +83,7 @@ const App = () => {
 
 export default App;
 ```
-```export default Component;``` se refiere al componente que se va a exportar de nuestro archivo ```Componente.js```.
+```export default Component``` se refiere al componente que se va a exportar de nuestro archivo ```Componente.js```. De ésta forma se envían componentes a otros archivos ```.js``` para su funcionamiento.
 
 #### Buenas prácticas JSX
 
