@@ -192,7 +192,7 @@ const App = () => {
     return (
         <>
             <Navbar />
-            <Carosuel />
+            <Carousel />
             <Main />
             <Contact />
         </>
@@ -201,6 +201,78 @@ const App = () => {
 
 export default App;
 ```
+
+
+### Component styling
+
+Para independizar los componentes en sus propios archivos es comúnmente utilizado el aplicar estilos ```css``` por medio de clases ```className="menu navigation-menu"``` y en un archivo externo de ```.css``` colocar los estilos por ```#id``` o ```.clase```.
+
+#### Inline style
+
+Similar a ingresar estilos con el atributo ```style``` de html, se pueden agregar estilos para un elemento utilizando JSX.
+
+```javascript
+    const divStyle = {
+        color: 'blue',
+        backgroundImage: 'url(' + imgUrl + ')',
+    };
+
+    const MenuComponent = () => {
+        return ( 
+            <nav className="navbar" style={divStyle}>
+                <a className="navbar-a">Home</a>
+            </nav>
+        )
+    }
+```
+O bien, 
+
+```javascript
+// Result style: '10px'
+<div style={{ height: 10 }}>
+  Hello World!
+</div>
+
+// Result style: '10%'
+<div style={{ height: '10%' }}>
+  Hello World!
+</div>
+```
+
+
+#### External style
+
+Similar a importar un archivo ```styles.css``` dentro de nuestro ```index.html```, se pueden implementar archivos ```.css``` dentro de un componente. Aplicando estilos por ```class``` o ```id```.
+
+**Navbar.js**
+```javascript
+import './Navbar.css';
+
+const Navbar = () => {
+    return(
+        <nav className="navbar">
+            <a className="navbar-a">Home</a>
+        </nav>
+    )
+}
+
+export default Navbar;
+```
+**Navbar.css**
+```css
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-a {
+    font-size: 2rem;
+}
+```
+
+
 
 ## Otros recursos
 > - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
