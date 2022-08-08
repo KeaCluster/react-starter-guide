@@ -114,7 +114,93 @@ export default App;
   
   > Cuando se encuentran las diferencias, Virtual DOM encuentra la mejor forma de actualizar nodos especificos del Real DOM sin la necesidad de actualizarlo en su totalidad.
 
-![Virtual DOM](./public/images/virtual_DOM.png)
+    ![Virtual DOM](./public/images/virtual_DOM.png)
+
+## Parte 3
+
+### React Components
+
+Se pueden comparar con bloques de construcción de Lego. Cada componente es un bloque de piezas que representa una sección del modelo completo.
+
+Estos componentes tienen como tarea hacer la construcción de la UI más fácil, dividiendo el problema de la app en piezas individuales que se pueden reutilizar. 
+
+La división de los componentes generalmente ayudan a separar su estructura global en secciones que puedan funcionar de forma individual. Los componentes más comúnes son:
+
+1. Inputs
+2. Botones
+3. Badge
+4. Lista
+5. Tabla
+6. NavBar
+7. Alert
+8. Card
+9. Tabs
+10. Select
+
+### Tipos de Componentes
+
+#### Functional Components
+
+Son simplemente funciones de javascript. Pueden o no recibir datos por medio de parámetros. Este tipo de componentes no toman en cuenta la existencia de otros componentes dentro de la aplicación.
+
+```javascript
+import React from 'react';
+
+const Navbar = () => {
+    return (
+        <nav>
+            // etc
+        </nav>
+    )
+
+}
+
+export default Navbar;
+```
+
+#### Class Components
+
+Este tipo de componentes si están conectados con otros componentes y pueden comunicarse enviándose datos uno a otro. 
+
+El uso de componentes funcionales es común cuando se sabe de antemano que ese componente no tendrá interactividad con otro.
+
+```javascript
+import React, { Component } from 'react';
+
+class Navbar extends React.Component {
+    render() {
+        return  (
+            <nav>
+                // etc
+            </nav>
+        )
+    }
+}
+
+export default Navbar;
+```
+
+### Importar componentes
+
+Sean componentes funcionales o de clase, se pueden importar e implementar en la app de una forma muy sencilla. Para renderizarlos simplemente tenemos que importar el ```componente.js``` a el archivo de la página donde se va a renderizar, para SPAs comúnmente es ```App.js```. Para componentes que se implementarán dentro de otro componente, la sintáxis es la misma
+
+```javascript
+
+import Navbar from './Components/Navbar/Navbar.js';
+
+const App = () => {
+    return (
+        <>
+            <Navbar />
+            <Carosuel />
+            <Main />
+            <Contact />
+        </>
+    );
+}
+
+export default App;
+```
 
 ## Otros recursos
 > - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
@@ -123,3 +209,4 @@ export default App;
 > - [Jean-Marc Mockel - React Best Practices](https://www.freecodecamp.org/news/best-practices-for-react/)
 > - [Ihechikara Vincent Abba - React Router v6](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
 > - [Reed Barger - React Router Cheatsheet](https://www.freecodecamp.org/news/react-router-cheatsheet/ )
+> - [Understanding Functional Components vs Class Components](https://www.twilio.com/blog/react-choose-functional-components)
