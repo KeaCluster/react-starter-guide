@@ -273,6 +273,262 @@ export default Navbar;
 ```
 
 
+La estructura del proyecto utilizando archivos ```.css``` externos se ve de la siguiente forma:
+```
+project
+│   README.md
+│   package.json
+│   ...
+│
+└───src
+│   │   App.js
+│   │   App.js
+│   │   ...
+│   │
+│   └───Components
+│       │
+│       └───Navbar
+│       │       Navbar.css
+│       │       Navbar.js
+│       │       
+│       └── ...
+```
+
+## Parte 4
+
+### Props
+
+```Props``` se refiere a propiedades. Argumentos de objetos con datos que le envíamos al componente para aplicarlo dentro de su lógica.
+
+Se utiliza props para aumentar significativamente la reusabilidad de los componentes en una aplicación, transformando la información que se comparte en información dinámica, y/o utilizando estos datos para modificar el componente.
+
+### Props sin desestructuración
+
+Podemos utilizar props dentro de un componente de la misma forma en la que aceptamos argumentos en una función.
+
+**Header.js**
+```javascript
+import React from 'react';
+const Header = (props) => {
+
+    const name = props.name;
+    const lastName = props.lastName;
+    
+    return (
+        <div>
+            <h1>Hola, {name}, {lastName}</h1>
+        </div>
+    )
+}
+
+export default Header;
+```
+
+Para enviar datos hacia ese componente, lo hacemos de la misma forma como utilizamos atributos dentro de una etiqueta ```html```.
+
+**App.js**
+```javascript
+import Navbar from './Components/Navbar/Navbar.js';
+//etc...
+
+const App = () => {
+    return (
+        <>
+            <Navbar />
+            <Header name="Griselo" lastName="Philip">
+            <Carousel />
+            <Main />
+            <Contact />
+        </>
+    );
+}
+
+export default App;
+
+```
+
+### Props con desestructuración
+
+A diferencia del método anterior, podemos declarar cada prop individual desde que los tomamos como parámetros en nuestro componente. 
+
+```App.js``` se mantiene igual
+
+**Header.js**
+```javascript
+import React from 'react';
+const Header = ({name, lastName}) => {
+    
+    return (
+        <div>
+            <h1>Hola, {name}, {lastName}</h1>
+        </div>
+    )
+}
+
+export default Header;
+```
+
+### Default props
+
+Para evitar confusión y mejorar UX, es común utilizar default props como valores predeterminados que serán utilizados en caso de que los parámetros fallen, o no se haga el fetch de manera correcta.
+
+Estos default props se crean directamente en el componente 
+
+**Header.js**
+```javascript
+import React from 'react';
+const Header = (name, lastName) => {
+    
+    return (
+        <div>
+            <h1>Hola, {name}, {lastName}</h1>
+        </div>
+    )
+}
+
+
+// Aqui declaramos default Props
+Header.defaultProps = {
+    name: "Nombre",
+    lastName: "Apellido"
+}
+
+export default Header;
+```
+
+
+### Props + spread
+
+Javascript tiene el operador spread, que es de gran utilidad al momento de enviar muchos datos a un componente, sin la necesidad de especificar cada uno como atributo dentro de la etiqueta del componente.
+
+
+
+
+
+**App.js**
+```javascript
+import Navbar from './Components/Navbar/Navbar.js';
+//etc...
+
+const App = () => {
+    // Definir los datos
+    const user = {
+        name: "Griselo",
+        lastName: "Philip"
+    };
+
+
+    return (
+        <>
+            <Navbar />
+            // Se envian los datos
+            <Header {...user}>
+            <Carousel />
+            <Main />
+            <Contact />
+        </>
+    );
+}
+
+export default App;
+
+```
+
+
+### Renderizado condicional con Props
+
+Renderizado condicional es la forma en que React permite mostrar ciertos datos en la interfaz cuando se cumplan ciertas condiciones lógicas.
+
+Se pueden utilizar de forma condicionales 
+
+```if - else ``` 
+
+``` condition && ```
+
+o, más comúnmente, con el operador ternario 
+
+```condition ? exprIfTrue : exprIfFalse ```
+
+> Condition: expresión lógica a evaluar
+
+> exprIfTrue: Lógica a ejecutar si es verdadero
+
+> exprIfFalse: Lógica a ejecutar si es falso
+
+
+**If - else**
+```javascript
+// Renderizado de icono de perfil, si esta iniciada la sesión
+// Renderizado de Boton si no
+const Navbar = (props) => {
+    return (
+        <nav>
+            <div clasName="logo"> 
+                // code here
+            </div>
+            {
+                if(props.isLogged) {
+                    return(<UserIcon />)
+                } else {
+                    return (<LoginButton />)
+                }
+            }
+        </nav>
+    )
+}
+
+export default Navbar;
+
+```
+
+**Ternary**
+```javascript
+// Misma lógica al ejemplo anterior
+const Navbar = (props) => {
+    return (
+        <nav>
+            <div clasName="logo"> 
+                // code here
+            </div>
+            { 
+                props.isLogged ? (<UserIcon />) : (<LoginButton />)
+            }
+        </nav>
+    )
+}
+
+export default Navbar;
+
+```
+
+**&&**
+```javascript
+// Misma lógica al ejemplo anterior
+const Navbar = (props) => {
+    return (
+        <nav>
+            <div clasName="logo"> 
+                // code here
+            </div>
+            {
+                props.isLogged && <UserIcon />
+            }
+        </nav>
+    )
+}
+
+export default Navbar;
+
+```
+
+
+
+
+
+
+
+
+
 
 ## Otros recursos
 > - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
