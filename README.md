@@ -521,13 +521,58 @@ export default Navbar;
 
 ```
 
+## Parte 5
 
+### Material UI
 
+[Material UI](https://mui.com/) es una librería open-source para React que hace uso e implementa el diseño [Diseño material de Google](https://material.io/).
 
+#### Instalación
 
+Se instala en nuestro proyecto por medio de npm o yarn.
 
+> npm
 
+```console
+npm install @mui/material @emotion/react @emotion/styled
+```
 
+> Yarn
+```console
+yarn add @mui/material @emotion/react @emotion/styled
+```
+
+> Emotion es una librería que permite utilizar y diseñar CSS dentro de javascript. Se puede sustituir por la libreria de styled-components, de la siguiente forma:
+
+```console
+npm install @mui/material @mui/styled-engine-sc styled-components
+```
+```console
+yarn add @mui/material @mui/styled-engine-sc styled-components
+```
+
+**nota**
+> @mui/material no contiene iconos. Para agregar a nuestro proyecto lo podemos hacer mediante npm
+
+> Para instalar fuentes, se puede hacer por medio de CDN, o vía NPM siguiendo las instrucciones de google fonts.
+
+```console
+npm install @mui/icons-material
+```
+```console
+yarn add @mui/icons-material
+```
+
+### Material UI - Componentes
+
+1. Layout
+ - [Container](https://mui.com/material-ui/react-container/)
+ - [Grid](https://mui.com/material-ui/react-grid/)
+ - [Stack](https://mui.com/material-ui/react-stack/)
+
+2. Display
+ - [App bar](https://mui.com/material-ui/react-app-bar/)
+ - [Card](https://mui.com/material-ui/react-card/)
 
 
 ## Otros recursos
