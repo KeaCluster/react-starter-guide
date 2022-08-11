@@ -552,9 +552,9 @@ yarn add @mui/material @mui/styled-engine-sc styled-components
 ```
 
 **nota**
-> @mui/material no contiene iconos. Para agregar a nuestro proyecto lo podemos hacer mediante npm
+- @mui/material no contiene iconos. Para agregar a nuestro proyecto lo podemos hacer mediante npm
 
-> Para instalar fuentes, se puede hacer por medio de CDN, o vía NPM siguiendo las instrucciones de google fonts.
+- Para instalar fuentes, se puede hacer por medio de CDN, o vía NPM siguiendo las instrucciones de google fonts.
 
 ```console
 npm install @mui/icons-material
