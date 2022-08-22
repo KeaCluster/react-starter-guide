@@ -574,6 +574,143 @@ yarn add @mui/icons-material
  - [App bar](https://mui.com/material-ui/react-app-bar/)
  - [Card](https://mui.com/material-ui/react-card/)
 
+## Parte 6
+
+### React Router
+
+[React Router](https://reactrouter.com/) es una librería para agregar client y server-side routing a páginas hechas con React y/o ReactNative.
+
+#### Instalación
+
+> npm
+
+```
+npm install react-router-dom@6
+```
+**nota**
+- Se utiliza la denominación *6* por la versión activa a la fecha de la creación de éste documento.
+
+### React Router getting started
+
+Importar ```BrowserRouter``` dentro de nuestro ```index.js``` en nuestra app y agregar el componente a nuestra app.
+
+
+**index.js**
+```javascript
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
+);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
+
+Esto nos da la libertad de utilizar React Router en cualquier parte de nuestra aplicación.
+
+**App.js**
+```javascript
+import './App.css';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+
+import Navbar from './Components/Navbar/Navbar';
+import Astronauts from './Components/Astronauts/Astronauts';
+import APOD from './Components/APOD/APOD';
+
+
+function App() {
+  // class = "";
+  //  className = "";
+  // Todos los elementos deben estar en una etiqueta padre
+  const data = {
+    name: "Griselo",
+    lastName: "Philip"
+  };
+
+  return (
+    <div className="App">
+      {/* <ResponsiveAppBar /> */}
+      <Navbar {...data} />
+      <Routes>
+        <Route path='/astronauts' element={<Astronauts />} />
+        <Route path='/apod' element={<APOD />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+
+Para aplicar estos links a cualquier parte de nuestra app es suficientE:
+
+**Nabvar.js**
+```javascript
+import {Link} from 'react-router-dom';
+
+import './Navbar.css';
+
+const Navbar = ({ name, lastName }) => {
+  return (
+    <nav className="navbar">
+      <div className="nav-container">
+        <div className='nav-left'>
+          <a href='/'>
+            <img alt='space-logo' className='nav-img' src="https://cdn.dribbble.com/users/1769954/screenshots/4216600/media/f1ed192ec1c5300d413fac7fb076f7d0.png"></img>
+          </a>
+          <h1 className='nav-title'>Space-app</h1>
+        </div>
+        <div className="nav-links">
+          <Link to="/astronauts">People in space</Link>
+          <Link to="/apod">Astronomy pic of the day</Link>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+Navbar.defaultProps = {
+  name: "Nombre",
+  lastName: "Apellido"
+}
+
+export default Navbar;
+```
+
+
+# And that's it
+## Well done
+
+
+
+
+
+![Welp](/public/images/end_of_line.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Otros recursos
 > - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
