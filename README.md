@@ -1,6 +1,9 @@
 # ReactJS-learning-path
 Learning-path para React basics
 
+
+## Ésta guía fue creada con CRA en emnte. Desde ésta actualización, la [documentación oficial](https://react.dev/) ha cambiado de CRA a usar frameworks para la creación de aplicaciones React 
+
 [React Docs](https://reactjs.org/)
 
 ### Requisitos
