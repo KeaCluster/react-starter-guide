@@ -90,7 +90,7 @@ Keep fidgeting with the rest of the files. Try to figure out what's going on ins
 
 React is sometimes called a framework and sometimes a library. If you're still confused, read the [Docs](https://react.dev/). What's important is that Vite has as much to do with React as a pirate has to do with a boat. A boat can very well be sailed without a pirate, but toss a pirate into the mix and suddenly there's a quest for buried treasure, a catchy sea shanty, and a parrot squawking unsolicited coding advice from the crow's nest.
 
-Anyway, Vite is the place that starts the sailing, but the pirate is ultimately the one responsible for looting the british army and get all the treasure.
+Anyway, Vite is the place that starts the sailing, but the pirate is ultimately the one responsible for looting the british army and getting all the treasure.
 
 ### React as a library.
 
@@ -103,6 +103,42 @@ What makes the magic happen is the way React implements Components. Small dynami
 
 ## DOM and Virtual DOM
 
+The DOM, as you should know by now, works in a similar structure to a tree. It has nodes and links that bind these nodes together in a tree-like structure. Each node represents an html element, with it's attributes, classes, id, etc.
 
-## JSX and Rendering
+**DOM Tree:**
+
+```plaintext
+    body
+    ├── header
+    │   ├── logo
+    │   └── nav
+    └── main
+        ├── section
+        └── footer
+```
+VDOM Tree:
+```plaintext
+    body (v1)
+    ├── header (v1)
+    │   ├── logo (v1)
+    │   └── nav (v2)
+    └── main (v1)
+        ├── section (v2)
+        └── footer (v1)
+```
+
+React operates with both the real DOM and a Virtual DOM (VDOM). The VDOM is an abstract representation of the DOM tree, which React utilizes to track changes in the state of nodes efficiently. The state of a node can vary from simple interactions like clicks to substantial changes such as navigating to a different route within the application.
+
+For managing significant state transitions or routing, additional libraries like React Router are often employed. However, for smaller state changes, React provides ample control over how state is managed and how components respond to state changes. This is where the Virtual DOM shines.
+
+Every component in React has a state, and theoretically, a component can host an arbitrary number of child components, similar to how a DOM node can contain several other nodes.
+
+Consider a scenario where a user is navigating through a contact list, viewing 15 contacts at a time. Should the entire application reload with every click to view the next set of contacts? Or should only the contact list update? Well, the next time the user wants to check the list of users they've blocked over a heated argument about which k-pop idol is better, they're going to find themselves interacting with good user experience.
+
+This comparison process is known as reconciliation, and is crucial for React's performance optimization. It's managed by a library called ReactDOM, which handles rendering React components to the DOM and updating them efficiently when the state or props change.
+
+## JSX
+
+### What's on the files?
+
 
