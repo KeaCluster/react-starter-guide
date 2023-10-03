@@ -1,14 +1,14 @@
+# _config.yml
+
+# Site Settings
+title: "React Starter Guide"
+description: "Simple guide to help you on your React journey"
+baseurl: "/react-starter-guide"
+url: "https://keacluser.github.io"
+
+# Build Settings
+
+# Other settings...
+remote_theme: pages-themes/midnight@v0.2.0
 plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
+- jekyll-remote-theme
