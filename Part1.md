@@ -86,8 +86,23 @@ Keep fidgeting with the rest of the files. Try to figure out what's going on ins
 
 ## Introduction to React
 
+### Vite is not React
+
+React is sometimes called a framework and sometimes a library. If you're still confused, read the [Docs](https://react.dev/). What's important is that Vite has as much to do with React as a pirate has to do with a boat. A boat can very well be sailed without a pirate, but toss a pirate into the mix and suddenly there's a quest for buried treasure, a catchy sea shanty, and a parrot squawking unsolicited coding advice from the crow's nest.
+
+Anyway, Vite is the place that starts the sailing, but the pirate is ultimately the one responsible for looting the british army and get all the treasure.
+
+### React as a library.
+
+You can start your development journey without vite. In fact it's what companies do out there in the real world since they have plenty more freedom to customize their project and only have what they'll really need in order to make their application work.
+This optimizes their development environment as well as their final product. Since this is a *test*, we won't be going that route as you might've noticed.
+
+React alongside its modules will give us the necessary tools to develop and build a small ~~stable~~ application to showcase what we've learned.
+
+What makes the magic happen is the way React implements Components. Small dynamic and modular pieces of the final interface that allows for reusable and clean code. Keeping our app size relatively small. Components can interact with one another alongside with the user if the code allows them to. Which is what we're ultimately aiming for; simple, reusable, clean, scalable code.
+
+## DOM and Virtual DOM
 
 
 ## JSX and Rendering
 
-Explain JSX and rendering in React...
