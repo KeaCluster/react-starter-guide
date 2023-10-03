@@ -65,10 +65,28 @@ Below is the directory structure for our React project initialized with Vite.js.
 ├── index.html
 ├── package.json
 └── vite.config.js
+```
+### Structure information
+
+As with any project with vite, the moment you initialize with the previous commands, a directory is created. It's Important to identify the structure of the project inside this `root` directoy. It's where all the magic happens and where the rest of the development phases will ocurr. 
+
+
+- `/root` isn't really called root. As you've realized by now, it's a way of calling the main directory where our project is saved. This directory should have the name of your application.
+- `/public` is a directory that's visible to the end-user, and thereby must never contain sensitive data/photos/videos or any kind of information. Most web applications and/or sites have this directory to store media that will be showcased to any end-user once the application is running.
+    - `/images` should be inside the `/public` directory.
+- `/src` is the main directory for our entire project. This folder will host most of our custom code, as well as give us a point of entrance for our main file for the application.
+    - `App.jsx` is the main file to host all of the application's components. While it should end up relatively small in size and in lines, It's where all of our components meet to later be translated to vanilla `html, css & js`.
+    - `App.css` and it's structure will vary depending on how the project's styles are managed. Different frameworks work with different methods, and the source to make a decision regarding style handling inside our React application comes from it's requirements.
+    - `index.css` is a simple yet efficient css file just like any other.
+    - `main.jsx` is a simple yet important `.jsx` file that contains the necessary lines to link our `App.jsx` file to the **always** required `index.html` file.
+    - `/Components` will host all of the necessary `.jsx` files to make our application reusable and maintanable.
+
+Keep fidgeting with the rest of the files. Try to figure out what's going on inside and study the code already in them. It'll be important later.
+
 
 ## Introduction to React
 
-Basic information about React...
+
 
 ## JSX and Rendering
 
