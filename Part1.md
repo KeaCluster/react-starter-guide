@@ -86,8 +86,80 @@ Keep fidgeting with the rest of the files. Try to figure out what's going on ins
 
 ## Introduction to React
 
+### Vite is not React
 
+React is sometimes called a framework and sometimes a library. If you're still confused, read the [Docs](https://react.dev/). What's important is that Vite has as much to do with React as a pirate has to do with a boat. A boat can very well be sailed without a pirate, but toss a pirate into the mix and suddenly there's a quest for buried treasure, a catchy sea shanty, and a parrot squawking unsolicited coding advice from the crow's nest.
 
-## JSX and Rendering
+Anyway, Vite is the place that starts the sailing, but the pirate is ultimately the one responsible for looting the british army and getting all the treasure.
 
-Explain JSX and rendering in React...
+### React as a library.
+
+You can start your development journey without vite. In fact it's what companies do out there in the real world since they have plenty more freedom to customize their project and only have what they'll really need in order to make their application work.
+This optimizes their development environment as well as their final product. Since this is a *test*, we won't be going that route as you might've noticed.
+
+React alongside its modules will give us the necessary tools to develop and build a small ~~stable~~ application to showcase what we've learned.
+
+What makes the magic happen is the way React implements Components. Small dynamic and modular pieces of the final interface that allows for reusable and clean code. Keeping our app size relatively small. Components can interact with one another alongside with the user if the code allows them to. Which is what we're ultimately aiming for; simple, reusable, clean, scalable code.
+
+## DOM and Virtual DOM
+
+The DOM, as you should know by now, works in a similar structure to a tree. It has nodes and links that bind these nodes together in a tree-like structure. Each node represents an html element, with it's attributes, classes, id, etc.
+
+**DOM Tree:**
+
+```plaintext
+    body
+    ├── header
+    │   ├── logo
+    │   └── nav
+    └── main
+        ├── section
+        └── footer
+```
+VDOM Tree:
+```plaintext
+    body (v1)
+    ├── header (v1)
+    │   ├── logo (v1)
+    │   └── nav (v2)
+    └── main (v1)
+        ├── section (v2)
+        └── footer (v1)
+```
+
+React operates with both the real DOM and a Virtual DOM (VDOM). The VDOM is an abstract representation of the DOM tree, which React utilizes to track changes in the state of nodes efficiently. The state of a node can vary from simple interactions like clicks to substantial changes such as navigating to a different route within the application.
+
+For managing significant state transitions or routing, additional libraries like React Router are often employed. However, for smaller state changes, React provides ample control over how state is managed and how components respond to state changes. This is where the Virtual DOM shines.
+
+Every component in React has a state, and theoretically, a component can host an arbitrary number of child components, similar to how a DOM node can contain several other nodes.
+
+Consider a scenario where a user is navigating through a contact list, viewing 15 contacts at a time. Should the entire application reload with every click to view the next set of contacts? Or should only the contact list update? Well, the next time the user wants to check the list of users they've blocked over a heated argument about which k-pop idol is better, they're going to find themselves interacting with good user experience.
+
+This comparison process is known as reconciliation, and is crucial for React's performance optimization. It's managed by a library called ReactDOM, which handles rendering React components to the DOM and updating them efficiently when the state or props change.
+
+## JSX
+
+### What's on the files?
+
+To simplify things, React can use `html` node elements inside `javascript` functions and classes.
+To be more precise, it doesn't do that at all. How react actually works is by implementing a special kind of syntax called `JSX`. This syntax allows the use of what seems like `html` elements inside `javascript`, but in reality its an extension of the usual javascript syntax with `XML` elements enabling for an intuitive and readable structure for defining UI.
+
+- HTML-like. But not reallyt. JSX provides a syntax that is reasily readable by people familiar with `html` and `xml` tags. So all the usual nodes can be implemented here.
+- JSX is more closely related to Javscript than HTML. This allows us to implement all of the necessary `javascript` logic and make interactive dynamic and reusable components by wrapping variables or `js` snippets in `{}`.
+- JSX -> JS. JSX is not supported by current browsers. This results in the need for a transpiler tool such as Babel. In this 'automated' process, JSX elements turn ito regular JS with the help of `React.createElement()` function calls.
+- Component declaration. JSX is used as the usual way to declare components in react. This makes it a standard throughout applications.
+
+Some JSX example:
+
+```jsx
+// declare a component which returns the jsx data
+const component = (
+    <div>
+        <h1>Hello, pirate!</h1>
+        <p>Can you eye the difference between html and jsx?</p>
+    </div>
+)
+
+// Use magic functions and render inside the usual root element of a normal html document.
+ReactDOM.render(component, document.getElementById('root'))
+```

@@ -15,7 +15,7 @@ This guide will walk you through setting up a React project using Vite.js as a f
     - Project Initialization with Vite.js
     - Directory Structure
     - Introduction to React
-    - JSX and Rendering
+    - JSX
 
 - [Part 2: Components and Props](./Part2.md)
     - Function Components
