@@ -144,7 +144,7 @@ This comparison process is known as reconciliation, and is crucial for React's p
 To simplify things, React can use `html` node elements inside `javascript` functions and classes.
 To be more precise, it doesn't do that at all. How react actually works is by implementing a special kind of syntax called `JSX`. This syntax allows the use of what seems like `html` elements inside `javascript`, but in reality its an extension of the usual javascript syntax with `XML` elements enabling for an intuitive and readable structure for defining UI.
 
-- HTML-like. But not reallyt. JSX provides a syntax that is reasily readable by people familiar with `html` and `xml` tags. So all the usual nodes can be implemented here.
+- HTML-like. But not really. JSX provides a syntax that is reasily readable by people familiar with `html` and `xml` tags. So all the usual nodes can be implemented here.
 - JSX is more closely related to Javscript than HTML. This allows us to implement all of the necessary `javascript` logic and make interactive dynamic and reusable components by wrapping variables or `js` snippets in `{}`.
 - JSX -> JS. JSX is not supported by current browsers. This results in the need for a transpiler tool such as Babel. In this 'automated' process, JSX elements turn ito regular JS with the help of `React.createElement()` function calls.
 - Component declaration. JSX is used as the usual way to declare components in react. This makes it a standard throughout applications.
