@@ -2,8 +2,8 @@
 
 ## Updates
 
-1. The last CRA guide is on the ```cra.md``` file.
-2. This starter guide will move on to using [vite](vitejs.dev) as it's the recommended tech to setup a basic React application with all necesarry files and modules.
+1. The last CRA guide is on the [CRA.md](./cra.md) file.
+2. This starter guide will move on to using [vite](https://vitejs.dev/) as it's the recommended tech to setup a basic React application with all necesarry files and modules.
 3. Just a test. There are better guides with better docs out there so don't stick to just this.
 
 ## Intro 
@@ -20,8 +20,8 @@ This guide will walk you through setting up a React project using Vite.js as a f
 - [Part 2: Components and Props](./Part2.md)
     - Function Components
     - Class Components
-    - Props
     - Component Composition
+    - Props
 
 - [Part 3: State](./Part3.md)
     - State and Lifecycle
