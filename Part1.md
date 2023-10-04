@@ -1,6 +1,17 @@
 # Part 1 - Setup, structure and basic info
 
 
+# Table of Contents
+1. [Project Initialization with Vite.js](#project-initialization-with-vitejs)
+2. [Directory Structure](#directory-structure)
+   - [Structure Information](#structure-information)
+3. [Introduction to React](#introduction-to-react)
+   - [Vite is not React](#vite-is-not-react)
+   - [React as a Library](#react-as-a-library)
+4. [DOM and Virtual DOM](#dom-and-virtual-dom)
+5. [JSX](#jsx)
+   - [What's on the Files?](#whats-on-the-files)
+
 In this part, we'll go through the steps to initialize a React project (No TSX) using Vite.js.
 
 ## Project Initialization with Vite.js
