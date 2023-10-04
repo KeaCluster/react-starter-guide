@@ -53,3 +53,8 @@ Feel free to navigate through each part. GLHF.
 > - [Reed Barger - React Router Cheatsheet](https://www.freecodecamp.org/news/react-router-cheatsheet/ )
 > - [Understanding Functional Components vs Class Components](https://www.twilio.com/blog/react-choose-functional-components)
 
+
+## Credits
+
+> This is still a WIP since React is an evolving library, alongside all the other subjects seen in this guide.
+> Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic theme.
