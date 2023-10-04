@@ -1,4 +1,4 @@
-# React starter test
+# React starter guide
 
 ## Updates
 
