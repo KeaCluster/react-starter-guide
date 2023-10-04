@@ -39,17 +39,17 @@ export default Button;
 2. How to
 Well, pretty simple in fact. All you need to do is export the component from it's own file (if that's how you manage your components) and then import it wherever you'd like to implement it.
     - Importing `Button` component inside `App`
+
 ```jsx
 import Button from './Components/Button.jsx'
 
 function App() {
-    // some logic here or something
-
     return (
         <Button />
     )
 }
 ```
+
 And that's it really. Whenever you want to use a component just make sure you're importing it from the correct route inside your project and write the necessary lines of code. Depending on the complexity of the component and/or internal logic of its *state* you might need to aditional syntax to make it work. But this is the basic structure for a simple non-dynamic Child->Parent component.
 
 ### Class components
@@ -145,7 +145,7 @@ const Hero = (props) => {
 export default Hero;
 ```
 
-**Q:** But what is actually inside props?
+**Q:** But what is actually inside props?  
 **A:** Well, log it out!
 
 ```jsx
