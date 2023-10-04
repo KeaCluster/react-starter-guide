@@ -1,5 +1,16 @@
 # Part 2
 
+# Table of Contents
+1. [Components](#components)
+   - [Function Components](#function-components)
+   - [Class Components](#class-components)
+2. [Props](#props)
+   - [What is it?](#what-is-it)
+   - [How?](#how)
+   - [Notes](#notes)
+3. [Extras](#extras)
+   - [Advanced Props and Practice](#advanced-props-and-practice)
+
 ## Components
 
 Components in React can be likened to Lego blocks used in building structures. Just as you would assemble various Lego pieces to create a design, components are the building blocks you use to develop a maintainable app. The advantage is, unlike physical Lego pieces where you might run out, in React you can reuse components throughout your app without needing to "buy" or create new ones.
