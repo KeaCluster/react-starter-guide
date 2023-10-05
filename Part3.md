@@ -25,7 +25,7 @@ We'll take a closer look at how `State` is managed and implemented. But to sum t
 ### Lifecycle
 
 React Components essentially work in phases. These phases represent all states of the component from creation to deletion:
-    - Mounting the component (Created and inserted into the DOM)
+- Mounting the component (Created and inserted into the DOM)
     - Updating (Re-rendering as a result of changes from its props or state)
     - Unmounting (Removing the component from the DOM)
 
@@ -40,17 +40,147 @@ To make things simple, they enable the use of stateful logic without changing ou
 ### Why?
 
 1. Reusability
-    By allowing us to reuse stateful logic without refactoring the components' hierarchy, we can extract and share hooks between components.
+By allowing us to reuse stateful logic without refactoring the components' hierarchy, we can extract and share hooks between components.
 2. Composition
-    `Hooks` provide a concise and simple way to access the React way of lifecycle inside our components. By simplifying lifecycle methods (seen before) to just a few lines of code that are the same between all components. Adhering to this method, code in our app will be as readable as code from another app that implements them.
+`Hooks` provide a concise and simple way to access the React way of lifecycle inside our components. By simplifying lifecycle methods (seen before) to just a few lines of code that are the same between all components. Adhering to this method, code in our app will be as readable as code from another app that implements them.
 3. No classes
-    The tide has shifted away from classes now. And just like the [React Docs](https://react.dev/reference/react/Component) mention, functional programming is a simpler and more objective way to use state.
+The tide has shifted away from classes now. And just like the [React Docs](https://react.dev/reference/react/Component) mention, functional programming is a simpler and more objective way to use state.
 4. Better defaults
-    Sometimes there is the case where the state of a component isn't necessarily well defined.
+Sometimes there is the case where the state of a component isn't necessarily well defined.
     - Lets say you have a cart component in your app and its state will be the products listed there. How can you set the default array of products inside your cart to be completely empty and prevent errors such as `Undefined` or `Null`?. Well, we can set default state with hooks and control any side effect.
 5. Side effects
     - If the state of your component is dependent of a request to a third party or even external API, then you dont really have any control over that request or its response. What if it fails? What if you want flexibility over how many times this request will be required depending on the components' lifecycle? A famous hook does just that.
 
 ### useState
 
+
+1. What?
+
+The `useState` is a fundamental hook provided by React to manage local state inside our functional components. This allows us to have control of the state in a more straightforward and readable manner.
+
+The syntax is quite simple.
+
+```jsx
+const [state, setState] = useState(initialState);
+```
+
+This should be declared at the top of our component, so just after initialization.
+
+Use state has three main parts
+- `state` is the current state value of the component
+- `setState` is a function that allows us to update the state
+- `initialState` is the initial value (set by us) of the state. 
+
+As you might've noticed, this declaration uses [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which is something already available in vanilla js. You can read more about it on the docs.
+
+1. How?
+
+Well, if you initialized your application with `vite.js` just like we did on part 1, you might already see it implemented in `App.jsx`.
+
+```jsx
+import { useState } from 'react';
+
+function App() {
+    const [count, setCount] = useState(0)
+    // declare state, declare our function to set it, and then inside useState() declare the initial value
+
+    return(
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+        </div>
+    )
+}
+
+// some more code here
+```
+
+Notice that we need to import `useState` from the React library and that the declaration inside the component gives **context** about what that state is used for. In this case, for a counter that will be updated by +1 each time the button is pressed
+
+```jsx
+onClick={() => setCount(count + 1)}
+```
+
+This is the event listener declared on our `<button>`. Inside it, a `callback` function which calls our `setCount()` declared at the top of the component. Inside it, we simply add `+1` to our current state.
+
+We can also set state with something called a `handler` function. Which are small custom functions that aid in the *handling* of our state:
+
+```jsx
+import { useState } from 'react';
+
+function App() {
+    const [count, setCount] = useState(0)
+    // declare state, declare our function to set it, and then inside useState() declare the initial value
+
+    const countHandler = () => setCount(count + 1);
+
+    return(
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={countHandler()}>
+                Click me
+            </button>
+        </div>
+    )
+}
+
+// some more code here
+```
+
+If you compare to the previous code, it's easier to read, a bit more manageable when refactoring, but it does the exact same thing.
+
+**Handlers** are more commonly used when the state of a component becomes a lot more complex. Such as in cases where we can make an `API` call through `FETCH` or a library like `Axios`. But don't worry, we'll sail to that island when the time comes.
+
+Here's another implementation of state:
+
+```jsx
+import React, { useState } from 'react';
+
+function ItemList() {
+    const [items, setItems] = useState([{ id: 1, text: 'Item 1' }]); // We have only one item here, but we could in theory have 10, 100 or 1000+
+    const [text, setText] = useState(''); // State for the text input
+
+
+    // Handlers
+    // As you can see, they can have more than one instruction
+    // They ARE functions after all.
+    const handleAdd = () => {
+        setItems([...items, { id: Math.random(), text }]);
+        setText('');
+    };
+
+    const handleDelete = (id) => {
+        setItems(items.filter(item => item.id !== id));
+    };
+
+    const handleEdit = (id, newText) => {
+        setItems(items.map(item => (item.id === id ? { ...item, text: newText } : item)));
+    };
+
+    return (
+        <div>
+            <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
+            <button onClick={handleAdd}>Add Item</button>
+            <ul>
+                {items.map(item => (
+                    <li key={item.id}>
+                        {item.text}
+                        <button onClick={() => handleDelete(item.id)}>Delete</button>
+                        <button onClick={() => handleEdit(item.id, prompt('New text:', item.text))}>Edit</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default ItemList;
+```
+
+Try this component out inside your project. Figure out what it does.
+
 ### useEffect
+
+
