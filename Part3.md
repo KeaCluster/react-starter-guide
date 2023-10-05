@@ -181,6 +181,48 @@ export default ItemList;
 
 Try this component out inside your project. Figure out what it does.
 
+
+<details><summary>Explanation</summary>
+
+1. State
+    - We have two different state variables. One for handling the list, and the other for the text inside the input. Since both are aspects of the component that **might** change, and affect the way its rendered, it affects its current `State` and lifecycle.
+2. Handlers
+    - `handleAdd` is the function that handles the way our items are added into the `items` state. The instructions inside are quite custom
+        - `setItems([...items, { id: Math.random(), text}])` is quite the code. But fear not, all this does is iterate over the previous items (because we don't want to delte them) and add a new one with a random `id:` attribute, and the `text` recovered from the `input`
+        - `setText('')` resets the text inside the input so it clears up when an item is added. 
+    - `handleDelete` is rather simple. All it does is filter through the current items in state, and returns to `setItems()` the ones that **don't** match the current `id`. This way, we can delete an item from our array of items without any complex functions.
+    - `handleEdit` is a mix between the previous both so let's look at it with more care:
+
+```jsx
+const handleEdit = (id, newText) => {
+
+}
+```
+
+Simply declares the function and sets its parameters.
+
+```jsx
+const handleEdit = (id, newText) => {
+    setItems(items.map(item => ()))
+}
+```
+
+So far, we only declare that `setItems` will have as parameter the *return* data of `items.map(item => ())`
+
+
+```jsx
+const handleEdit = (id, newText) => {
+    setItems(items.map(item => (item.id === id ? { ...item, text: newText } : item)));
+}
+```
+
+So this looks weird, right? But if we study it part by part and get some help from our one-eyed parrot, we'll realize that its a simple conditional that, if the id matches, it will reset the item's `text` attribute, and if it doesn't, then it will simply return the current item being mapped.
+
+3. And that's pretty much everything it does.
+    - Separating our handlers from the `return()` method makes our code cleaner.
+    - Declaring our state at the top of the component is a good practice and the way its recommended. It also gives good context about what the component is doing without the need to go all the way down through all the code.
+    - 
+
+</details>
+
 ### useEffect
-
-
