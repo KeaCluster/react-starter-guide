@@ -8,6 +8,8 @@
     - [Why?](#why?)
     - [useState](#usestate)
     - [useEffect](#useeffect)
+3. [Extras](#extras)
+    - [Advanced hooks and practice](#advanced-hooks-and-practice)
 
 ## State and lifecycle
 
@@ -266,6 +268,8 @@ import { useEffect, useState } from 'react';
 
 function Card() {
     const [data, setData] = useState(null);
+    // null is the initial state for our conditional rendering down bellow
+    // another option is to set it as an empty array and make the condition check its length
 
     useEffect(() => {
 
@@ -278,7 +282,7 @@ function Card() {
 
         fetchData();
 
-    }, []); // Empty array
+    }, []); // Empty array -> useEffect will run only once
     return (
         <div>
             {data ? <div>Data: {JSON.stringify(data)}</div> : 'Loading...'}
@@ -308,6 +312,6 @@ Try the following exercise in your application
     - Make an API call to the following API: [How many people are in space right now](http://open-notify.org/Open-Notify-API/People-In-Space/)
     - If the link is dead (hopefully not), you can use the always available [PokeAPI](https://pokeapi.co/docs/v2)
 3. Now, with the data of your response, make a small card to either show the current *astros* or multiple *pokemon*. Check the corresponding API documentation on to how to access that specific data.
-    - If there are multiple poeple, you can use what we saw in the **Components** section to map through every object.
+    - If there are multiple people, you can use what we saw in the **Components** section to iterate through the array and get each object.
 
 4. GLHF
