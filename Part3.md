@@ -73,7 +73,7 @@ Use state has three main parts
 
 As you might've noticed, this declaration uses [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which is something already available in vanilla js. You can read more about it on the docs.
 
-1. How?
+2. How?
 
 Well, if you initialized your application with `vite.js` just like we did on part 1, you might already see it implemented in `App.jsx`.
 
@@ -193,6 +193,7 @@ Try this component out inside your project. Figure out what it does.
     - `handleDelete` is rather simple. All it does is filter through the current items in state, and returns to `setItems()` the ones that **don't** match the current `id`. This way, we can delete an item from our array of items without any complex functions.
     - `handleEdit` is a mix between the previous both so let's look at it with more care:
 
+
 ```jsx
 const handleEdit = (id, newText) => {
 
@@ -221,8 +222,12 @@ So this looks weird, right? But if we study it part by part and get some help fr
 3. And that's pretty much everything it does.
     - Separating our handlers from the `return()` method makes our code cleaner.
     - Declaring our state at the top of the component is a good practice and the way its recommended. It also gives good context about what the component is doing without the need to go all the way down through all the code.
-    - 
+    - While the code seems complex at first, its just a matter of diving into it and checking out line by line. 
+    - There's **always** documentation out there. 
 
 </details>
 
 ### useEffect
+
+1. What?
+
