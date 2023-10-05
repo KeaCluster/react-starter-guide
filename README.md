@@ -57,4 +57,5 @@ Feel free to navigate through each part. GLHF.
 ## Credits
 
 > This is still a WIP since React is an evolving library, alongside all the other subjects seen in this guide.
+
 > Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic theme.
