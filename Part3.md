@@ -182,21 +182,24 @@ export default ItemList;
 Try this component out inside your project. Figure out what it does.
 
 
-<details><summary>Explanation</summary>
+> Somehow this section won't render properly on Github pages. You can check it out directly from the repo. Sorry.
 
-1. State
+<details>
+    <summary>Explanation</summary>
+
+    1. State
     - We have two different state variables. One for handling the list, and the other for the text inside the input. Since both are aspects of the component that **might** change, and affect the way its rendered, it affects its current `State` and lifecycle.
-2. Handlers
+    2. Handlers
     - `handleAdd` is the function that handles the way our items are added into the `items` state. The instructions inside are quite custom
-        - `setItems([...items, { id: Math.random(), text}])` is quite the code. But fear not, all this does is iterate over the previous items (because we don't want to delte them) and add a new one with a random `id:` attribute, and the `text` recovered from the `input`
-        - `setText('')` resets the text inside the input so it clears up when an item is added. 
+    - `setItems([...items, { id: Math.random(), text}])` is quite the code. But fear not, all this does is iterate over the previous items (because we don't want to delte them) and add a new one with a random `id:` attribute, and the `text` recovered from the `input`
+    - `setText('')` resets the text inside the input so it clears up when an item is added. 
     - `handleDelete` is rather simple. All it does is filter through the current items in state, and returns to `setItems()` the ones that **don't** match the current `id`. This way, we can delete an item from our array of items without any complex functions.
     - `handleEdit` is a mix between the previous both so let's look at it with more care:
 
 
 ```jsx
 const handleEdit = (id, newText) => {
-
+    // code here
 }
 ```
 
@@ -220,10 +223,10 @@ const handleEdit = (id, newText) => {
 So this looks weird, right? But if we study it part by part and get some help from our one-eyed parrot, we'll realize that its a simple conditional that, if the id matches, it will reset the item's `text` attribute, and if it doesn't, then it will simply return the current item being mapped.
 
 3. And that's pretty much everything it does.
-    - Separating our handlers from the `return()` method makes our code cleaner.
-    - Declaring our state at the top of the component is a good practice and the way its recommended. It also gives good context about what the component is doing without the need to go all the way down through all the code.
-    - While the code seems complex at first, its just a matter of diving into it and checking out line by line. 
-    - There's **always** documentation out there. 
+- Separating our handlers from the `return()` method makes our code cleaner.
+- Declaring our state at the top of the component is a good practice and the way its recommended. It also gives good context about what the component is doing without the need to go all the way down through all the code.
+- While the code seems complex at first, its just a matter of diving into it and checking out line by line. 
+- There's **always** documentation out there. 
 
 </details>
 
@@ -241,12 +244,12 @@ To simplify things, this hook comes into play when **other** APIs, external data
 
 ```jsx
 useEffect(() => {
-    // logic here
+// logic here
 }, [])
 ```
 
 In essence, the syntax is simple. 
-    - `useEffect` is the declaration (duh)
+- `useEffect` is the declaration (duh)
     - `() => {}` a simple callback where we will put all the necessary logic and the place where we will set our side effects (API calls)
     - `[]` a dependency array. If our component/code depends on some variable, change or some kind external execution, and when that variable changes we **need** to execute that array again, then this is the place where we put **that variable**. If the array is empty (it is in most cases), then `useEffect` will only run once. *If* and **when** the array is omitted, then `useEffect` will run after **every** render.
 
@@ -258,4 +261,53 @@ Let's add a simple `fetch` function to a new component. Make sure to import it i
 
 As mentioned before, the data *fetched* from the API comes from an external third party source, so it's an excellent place to implement `useEffect`.
 
+```jsx
+import { useEffect, useState } from 'react';
 
+function Card() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+
+        // Fetch data from API
+        async function fetchData() {
+            const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            const result = await response.json();
+            setData(result);
+        }
+
+        fetchData();
+
+    }, []); // Empty array
+    return (
+        <div>
+            {data ? <div>Data: {JSON.stringify(data)}</div> : 'Loading...'}
+        </div>
+    )
+}
+```
+
+We also implement `useState` here to save our fetched data into the state of the component. But where that data comes from is the interesting part.
+Since we don't want `useEffect` to execute multiple times calling our API over and over, the *dependency* array is completely empty.
+
+- The logic inside `useEffect` is something we've seen before at this point in time. `Async/await` shoudn't be new concepts to us. The case is the same with `fetch()` and `response.json()`
+- All we are doing here is declaring with `useEffect` that our fetch will be running once at component execution.
+
+That's pretty much everything about `useEffect`.
+
+
+## Extras
+
+### Advanced Hooks and practice
+
+Try the following exercise in your application
+
+1. Make a component called `Astros.jsx`
+    - Give it the basic `jsx` structure and import it into `App.jsx`
+2. With the help of Hooks, do the following:
+    - Make an API call to the following API: [How many people are in space right now](http://open-notify.org/Open-Notify-API/People-In-Space/)
+    - If the link is dead (hopefully not), you can use the always available [PokeAPI](https://pokeapi.co/docs/v2)
+3. Now, with the data of your response, make a small card to either show the current *astros* or multiple *pokemon*. Check the corresponding API documentation on to how to access that specific data.
+    - If there are multiple poeple, you can use what we saw in the **Components** section to map through every object.
+
+4. GLHF
