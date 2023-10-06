@@ -1,5 +1,11 @@
 # Part 4 - Material UI implementation
 
+# Table of Contents
+1. [Installation](#installation)
+    - [Setup](#setup)
+2. [Implementation](#implementation)
+    - [Usage and compatibility](#usage-and-compatibility)
+
 The use of a component library is very much used out there. Just how [Bootstrap](https://getbootstrap.com/) is often implemented for reponsiveness and quickness when building a site, there are libraries and collections of components available for React.
 
 One we could call *fundamental* would be [Material UI](https://mui.com/). 
@@ -43,7 +49,7 @@ If everything went according to plan, now we should have the follwing lines in o
         "@emotion/core": "^X.x.x",
         "@emotion/react": "^X.x.x",
         "@emotion/styled": "^X.x.x",
-        "@mui/icons-material": "^X.x.x",
+"@mui/icons-material": "^X.x.x",
         "@mui/material": "^X.x.x",
         // or here
     },
