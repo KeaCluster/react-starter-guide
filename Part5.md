@@ -10,7 +10,7 @@
 4. [Extras](#extras)
     - [Practice](#practice)
 
-    We're almost at the end of this cruise. So let's continue our journey and get finally get this treasure.
+    We're almost at the end of this cruise. So let's continue our journey and get finally get that treasure.
 
 ## What is it
 
