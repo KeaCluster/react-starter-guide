@@ -3,7 +3,7 @@
 ## Updates
 
 1. The last CRA guide is on the [CRA.md](./cra.md) file.
-2. This starter guide will move on to using [vite](https://vitejs.dev/) as it's the recommended tech to setup a basic React application with all necesarry files and modules.
+2. This starter guide will move on to using [vite](https://vitejs.dev/) as its the recommended tech to setup a basic React application with all necesarry files and modules.
 3. Just a test. There are better guides with better docs out there so don't stick to just this.
 
 ## Intro 
