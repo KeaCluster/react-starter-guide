@@ -40,7 +40,9 @@ We'll go through the steps to initialize a React project (No TS) using Vite.js.
 
         - First selection: **React**
         - Second: **Javascript**
-        - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
+
+    If you select any other option,
+    remember that the simplest soltion at this point can be to start over.
 
 3. **Navigate to your project directory**:
    - Once the project is created, navigate to the project directory:
@@ -114,11 +116,11 @@ It's where all the magic happens &  where the rest of the development will occur
 
 - `/public` is a directory that's visible to the end-user if inspected.
   - therefore, must never contain sensitive data. or any kind of information.
-  - Most web applications and/or sites have this directory to store media that will be showcased to any end-user once the application is running.
+  - Web applications and/or sites have this directory to store media/files that will be showcased to any end-user once the application is running.
 - `/images` should be inside the `/public` directory.
 - `/src` is the main directory for our entire project.
   - This folder will host most of our custom code.
-- `/Components` will host all of the necessary `.jsx` files to make our application reusable and maintanable.
+- `/Components` will host all of the necessary `.jsx` component files.
 
 #### Files
 
