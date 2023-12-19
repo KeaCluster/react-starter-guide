@@ -37,33 +37,48 @@ We'll go through the steps to initialize a React project (No TS) using Vite.js.
 
      - First selection: **React**
      - Second: **Javascript**
-     - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
+
+    - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
 
 3. **Navigate to your project directory**:
    - Once the project is created, navigate to the project directory:
+
      ```bash
      cd my-react-app
      ```
 
 4. **Install dependencies**:
-   - Install any necessary dependencies using npm. This command is only necessary for the initial setup and won't be required again unless running on a different device or dev environment. 
+   - Install any necessary dependencies using npm.
+        - This command is only necessary for the initial setup
+
      ```bash
      npm install
      ```
 
 5. **Start the development server**:
    - Now, start the development server:
+
      ```bash
      npm run dev
      ```
-     This command will start the Vite development server, and you should be able to see your new React app running at [http://localhost:$PORT](http://localhost:$PORT) in your web browser. Change the `$PORT` space to adjust to the port `vite.js` just gave you. It's always on display on your console.
 
-6. **Inspecting the project**:
-   - You can now start inspecting your project! Open the `src` directory, and you'll find an `App.jsx` file where you can begin writing your React code. Remember to **study and inspect** before you make any changes.
+    This command will start the Vite development server.
+    You should be able to see your new React app running at [http://localhost:\$PORT](http://localhost:$PORT).
+    Change the `$PORT` space to adjust to the port `vite.js` just gave you.
+    (It's always on display on your terminal)
+
+6. **Inspecting the project**
+
+You can now start inspecting your project!
+
+- Open the `src` directory, and you'll find an `App.jsx` file.
+- You can begin writing your React code.
+- Remember to **study and inspect** before you make any changes.
 
 ## Directory Structure
 
-Below is the directory structure for our React project initialized with Vite.js. If you are missing any directories make sure to create them.
+Below is the directory structure for our React project initialized with Vite.js.
+**If you are missing any directories make sure to create them for future use**
 
 ```plaintext
 /root
@@ -84,10 +99,12 @@ Below is the directory structure for our React project initialized with Vite.js.
 ├── package.json
 └── vite.config.js
 ```
+
 ### Structure information
 
-As with any project with vite, the moment you initialize with the previous commands, a directory is created. It's Important to identify the structure of the project inside this `root` directoy. It's where all the magic happens and where the rest of the development phases will ocurr. 
-
+As with any project using *vite*, the moment you init, a directory is created.
+It's Important to identify the structure of the project inside this `root` directory.
+It's where all the magic happens &  where the rest of the development will occur.
 
 - `/root` isn't really called root. As you've realized by now, it's a way of calling the main directory where our project is saved. This directory should have the name of your application.
 - `/public` is a directory that's visible to the end-user, and thereby must never contain sensitive data/photos/videos or any kind of information. Most web applications and/or sites have this directory to store media that will be showcased to any end-user once the application is running.
@@ -126,23 +143,23 @@ The DOM, as you should know by now, works in a similar structure to a tree. It h
 **DOM Tree:**
 
 ```plaintext
-    body
-    ├── header
-    │   ├── logo
-    │   └── nav
-    └── main
-        ├── section
-        └── footer
+body
+├── header
+│   ├── logo
+│   └── nav
+└── main
+├── section
+└── footer
 ```
 VDOM Tree:
 ```plaintext
-    body (v1)
-    ├── header (v1)
-    │   ├── logo (v1)
-    │   └── nav (v2)
-    └── main (v1)
-        ├── section (v2)
-        └── footer (v1)
+body (v1)
+├── header (v1)
+│   ├── logo (v1)
+│   └── nav (v2)
+└── main (v1)
+├── section (v2)
+└── footer (v1)
 ```
 
 React operates with both the real DOM and a Virtual DOM (VDOM). The VDOM is an abstract representation of the DOM tree, which React utilizes to track changes in the state of nodes efficiently. The state of a node can vary from simple interactions like clicks to substantial changes such as navigating to a different route within the application.
@@ -172,10 +189,10 @@ Some JSX example:
 ```jsx
 // declare a component which returns the jsx data
 const component = (
-    <div>
-        <h1>Hello, pirate!</h1>
-        <p>Can you eye the difference between html and jsx?</p>
-    </div>
+<div>
+<h1>Hello, pirate!</h1>
+<p>Can you eye the difference between html and jsx?</p>
+</div>
 )
 
 // Use magic functions and render inside the usual root element of a normal html document.
