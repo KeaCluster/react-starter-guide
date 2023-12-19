@@ -38,10 +38,9 @@ We'll go through the steps to initialize a React project (No TS) using Vite.js.
         - If on windows, try executing the command on `cmd` or `git bash`.
         - Sometimes either won't allow the use of arrow keys for selection.
 
-     - First selection: **React**
-     - Second: **Javascript**
-
-    - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
+        - First selection: **React**
+        - Second: **Javascript**
+        - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
 
 3. **Navigate to your project directory**:
    - Once the project is created, navigate to the project directory:
@@ -225,10 +224,18 @@ This comparison process is known as reconciliation, and is crucial for React's p
 To simplify things, React can use `html` node elements inside `javascript` functions and classes.
 To be more precise, it doesn't do that at all. How react actually works is by implementing a special kind of syntax called `JSX`. This syntax allows the use of what seems like `html` elements inside `javascript`, but in reality its an extension of the usual javascript syntax with `XML` elements enabling for an intuitive and readable structure for defining UI.
 
-- HTML-like. But not really. JSX provides a syntax that is reasily readable by people familiar with `html` and `xml` tags. So all the usual nodes can be implemented here.
-- JSX is more closely related to Javscript than HTML. This allows us to implement all of the necessary `javascript` logic and make interactive dynamic and reusable components by wrapping variables or `js` snippets in `{}`.
-- JSX -> JS. JSX is not supported by current browsers. This results in the need for a transpiler tool such as Babel. In this 'automated' process, JSX elements turn ito regular JS with the help of `React.createElement()` function calls.
-- Component declaration. JSX is used as the usual way to declare components in react. This makes it a standard throughout applications.
+- HTML-like. But not really.
+  - JSX provides a syntax easily readable by people familiar with `html` and `xml` tags.
+  - All the usual nodes can be implemented here.
+- JSX is more closely related to Javscript than HTML.
+  - This allows us to implement all of the necessary `javascript` logic and make interactive dynamic and reusable components by wrapping variables or `js` snippets in `{}`.
+- JSX -> JS.
+  - JSX is not supported by current browsers.
+  - This results in the need for a transpiler tool such as Babel.
+  - In this 'automated' process, JSX elements turn into regular JS with the help of `React.createElement()` function calls.
+- Component declaration.
+  - JSX is used as the usual way to declare components in react. 
+  - This makes it a standard throughout applications.
 
 Some JSX example:
 
@@ -241,6 +248,7 @@ const component = (
 </div>
 )
 
-// Use magic functions and render inside the usual root element of a normal html document.
+// Uses magic functions and renders inside the root element of an html document.
+
 ReactDOM.render(component, document.getElementById('root'))
 ```
