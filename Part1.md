@@ -1,7 +1,7 @@
 # Part 1 - Setup, structure and basic info
 
+## Table of Contents
 
-# Table of Contents
 1. [Project Initialization with Vite.js](#project-initialization-with-vitejs)
 2. [Directory Structure](#directory-structure)
    - [Structure Information](#structure-information)
@@ -12,25 +12,32 @@
 5. [JSX](#jsx)
    - [What's on the Files?](#whats-on-the-files)
 
-In this part, we'll go through the steps to initialize a React project (No TSX) using Vite.js.
+We'll go through the steps to initialize a React project (No TS) using Vite.js.
 
 ## Project Initialization with Vite.js
 
 1. **Install Node.js**:
-   - Ensure you have [Node.js](https://nodejs.org/en/) installed on your machine. Vite requires Node.js version 12.0.0 or higher. The latest stable release (LST) is always recommended. Remember that with Node.js npm should also be included.
+    - Ensure you have [Node.js](https://nodejs.org/en/) installed.
+    - Vite requires Node.js version 12.0.0 or higher.
+        - The latest stable release (LST) is always recommended.
+        - Remember that with Node.js npm should also be included.
 
 2. **Create a new project**:
    - Open your terminal and run the following command to create a new project:
+
      ```bash
      npm create vite@latest my-react-app --template react
      ```
-     Replace `my-react-app` with the desired project name. 
 
-     - Make sure to select the proper options when running the command. If on windows, try executing the command on `cmd` or `git bash`. Sometimes either won't allow the use of arrow keys for selection.
+     Replace `my-react-app` with the desired project name.
+
+     - Make sure to select the proper options when running the command.
+        - If on windows, try executing the command on `cmd` or `git bash`.
+        - Sometimes either won't allow the use of arrow keys for selection.
 
      - First selection: **React**
      - Second: **Javascript**
-     - If you select any other option, remember the solution can be to delete the project and start over.
+     - If you select any other option, remember that the simplest solution at this point can be to delete the project and start over.
 
 3. **Navigate to your project directory**:
    - Once the project is created, navigate to the project directory:
