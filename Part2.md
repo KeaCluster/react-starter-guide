@@ -3,16 +3,16 @@
 <!-- toc -->
 
 - [Components](#components)
-  * [Function components](#function-components)
-    + [Parts of a component](#parts-of-a-component)
-    + [How to](#how-to)
-  * [Class components](#class-components)
+  - [Function components](#function-components)
+    - [Parts of a component](#parts-of-a-component)
+    - [How to](#how-to)
+  - [Class components](#class-components)
 - [Props](#props)
-  * [What is it?](#what-is-it)
-  * [How?](#how)
-  * [Notes](#notes)
+  - [What is it?](#what-is-it)
+  - [How?](#how)
+  - [Notes](#notes)
 - [Extras](#extras)
-  * [Advanced props and practice](#advanced-props-and-practice)
+  - [Advanced props and practice](#advanced-props-and-practice)
 
 <!-- tocstop -->
 
