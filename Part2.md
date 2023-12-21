@@ -4,6 +4,8 @@
 
 - [Components](#components)
   * [Function components](#function-components)
+    + [Parts of a component](#parts-of-a-component)
+    + [How to](#how-to)
   * [Class components](#class-components)
 - [Props](#props)
   * [What is it?](#what-is-it)
@@ -41,10 +43,13 @@ It's essential to structure your components based on your project's specific req
 
 While relatively new, functional components will be the main way we'll be writing our React components since Class-based components are no longer often used anymore. Previously, Class components were the norm when writing a dynamic component. However with the introduction of Hooks in react, which we'll see soon enough, function components became just as relevant, if not more, to write compelling useful and reusable dynamic UI components.
 
-1. Parts of a component
+#### Parts of a component
 There are three main sections of a component that we should always take in mind.
+
     - Component **definition** is how our component is declared and how we'll make use of it. A common good practice is to delcare a components' name with *Pascal Case*. Hence if we're declaring a button component it should be `function Button() { ... }` instead of the usual *camelCase* declaration. As always, their name should describe exactly what they do
+
     - The **Body** of our component is where most of the necessary `javascript` logic will be declared and take place. Functions can be declared and used inside of functions, hence we can declare *handlers* to actually handle the components' internal logic.
+
     - The **Return** section of a component is the part there the `html` nodes will be declared and returned. And while multiple nodes can be returned, there should **always** be a single top level node to surround the child elements.
 
 ```jsx
@@ -57,15 +62,17 @@ function Button() {
     )
 }
 
-
 export default Button;
 ```
 
-2. How to
+#### How to
+
 Well, pretty simple in fact. All you need to do is export the component from it's own file (if that's how you manage your components) and then import it wherever you'd like to implement it.
+
     - Importing `Button` component inside `App`
 
 ```jsx
+
 import Button from './Components/Button.jsx'
 
 function App() {
