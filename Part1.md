@@ -4,14 +4,14 @@
 
 - [Project Initialization with Vite.js](#project-initialization-with-vitejs)
 - [Directory Structure](#directory-structure)
-  * [Structure information](#structure-information)
-    + [Files](#files)
+  - [Structure information](#structure-information)
+    - [Files](#files)
 - [Introduction to React](#introduction-to-react)
-  * [Vite is not React](#vite-is-not-react)
-  * [React as a library](#react-as-a-library)
+  - [Vite is not React](#vite-is-not-react)
+  - [React as a library](#react-as-a-library)
 - [DOM and Virtual DOM](#dom-and-virtual-dom)
 - [JSX](#jsx)
-  * [What's on the files?](#whats-on-the-files)
+  - [What's on the files?](#whats-on-the-files)
 
 <!-- tocstop -->
 
