@@ -291,29 +291,39 @@ And that's pretty much everything it does.
 
 ### useEffect
 
-1. What?
+#### What?
 
-[`useEffect`](https://react.dev/reference/react/useEffect) is another basic hook that we can implement in our components. Unlike `state` however, its not as mandatory when handling state.
+[`useEffect`](https://react.dev/reference/react/useEffect)
+is another basic hook that we can implement in our components.
+Unlike `state` however, its not as "mandatory" when handling state.
 
-The implementation of `useEffect` and its use cases are a tid bit more about the component lifecycle. It's like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined in class components, but with a simpler and more intuitive API.
+The implementation of `useEffect` is a tid bit more about **component lifecycle**.
+It's like `componentDidMount`, `componentDidUpdate`,
+and `componentWillUnmount` combined in class components,
+but with a simpler and more intuitive API.
 
-This hook is used to perform and handle *side effects* in our application. Such as *data fetching, subscriptions,* or *manual DOM changes*
+This hook is used to perform and handle *side effects* in our application.
+Such as *data fetching, subscriptions,* or *manual DOM changes*
 
-To simplify things, this hook comes into play when **other** APIs, external data or manual override of the component happen. However, the implementation is quite simple.
+To simplify things, this hook comes into play when **other** APIs,
+external data or manual override of the component happen.
+However, the implementation is quite simple.
 
 ```jsx
 useEffect(() => {
-// logic here
+  // logic here
 }, [])
 ```
 
-In essence, the syntax is simple. 
+In essence, the syntax is simple.
+
 - `useEffect` is the declaration (duh)
-    - `() => {}` a simple callback where we will put all the necessary logic and the place where we will set our side effects (API calls)
-    - `[]` a dependency array. If our component/code depends on some variable, change or some kind external execution, and when that variable changes we **need** to execute that array again, then this is the place where we put **that variable**. If the array is empty (it is in most cases), then `useEffect` will only run once. *If* and **when** the array is omitted, then `useEffect` will run after **every** render.
+  - `() => {}` a simple callback where we will put all the necessary logic
+    - And the place where we will set our side effects (API calls)
+  - `[]` a dependency array.
+    - If our component/code depends on some variable, change or some kind external execution, and when that variable changes we **need** to execute that array again, then this is the place where we put **that variable**. If the array is empty (it is in most cases), then `useEffect` will only run once. *If* and **when** the array is omitted, then `useEffect` will run after **every** render.
 
-
-2. How?
+#### How?
 
 
 Let's add a simple `fetch` function to a new component. Make sure to import it in your `App.jsx`.
