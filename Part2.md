@@ -207,7 +207,7 @@ export default Hero;
 
 As you might've noticed by logging `props`, the result is nothing but an object that will contain the properties of the child component passed from its parent component. So, all "attributes" sent from the parent component will be available here. And just as with html elements, you can send from the parent component as much infrormation as you need, so long as it is actually needed.
 
-### Notes 
+### Notes
 
 - `Props` are **read-only** and a component should never modify its own props.
 - Fun fact, it's also a common practice to use [object destructuring](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) just like in vanilla js when reading props. This way your code is cleaner and easier to read. Its also more manageable when in the process of maintaining it.
@@ -227,7 +227,6 @@ const Hero = ({title}) => {
 export default Hero;
 ```
 
-
 ## Extras
 
 ### Advanced props and practice
@@ -241,6 +240,7 @@ Try making a component called Navbar. Give it the necessary styles to be at the 
     - Astros
 
 Now, inside `App.jsx` insert the following code:
+
 - Remember to import the component
 
 ```jsx
@@ -260,7 +260,7 @@ const App = () => {
 }
 ```
 
-3. And with the use of the previously seen `props` logic, alongside some `vanilla js` help, render all the links:
+3. And with the use of the previously seen `props`, render all the links:
 
 ```jsx
 const Navbar = ({links}) => {
@@ -284,9 +284,10 @@ export default Navbar
 ```
 
 4. Study what happens
-    - How are the `<a>` tags rendered?
-    - Why is there a callback function?
-    - What happens if you remove the `key prop` from the element?
-        - This will come in handy in the future and is an important aspect of React and child components.
-    - Why is there no return fuction?
-    - What the heck is `<> </>` and why is it so important?
+
+- How are the `<a>` tags rendered?
+- Why is there a callback function?
+- What happens if you remove the `key prop` from the element?
+  - This will come in handy in the future and is an important aspect of React and child components.
+- Why is there no return fuction?
+- What the heck is `<> </>` and why is it so important?
