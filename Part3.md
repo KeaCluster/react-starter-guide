@@ -10,7 +10,11 @@
 - [Hooks](#hooks)
   - [Why?](#why)
   - [useState](#usestate)
+    - [What is useState?](#what-is-usestate)
+    - [How is useState?](#how-is-usestate)
   - [useEffect](#useeffect)
+    - [What is useEffect?](#what-is-useeffect)
+    - [How is useEffect?](#how-is-useeffect)
 - [Extras](#extras)
   - [Advanced Hooks and practice](#advanced-hooks-and-practice)
 
@@ -90,7 +94,7 @@ Sometimes there is the case where the state of a component isn't necessarily wel
 
 ### useState
 
-#### What?
+#### What is useState?
 
 - [`useState`](https://react.dev/reference/react/useState)
   - Fundamental hook provided by React to manage local state inside functional components.
@@ -113,7 +117,7 @@ As you might've noticed, this declaration uses [array destructuring](https://dev
 which is something already available with vanilla js.
 You can read more about it on the docs.
 
-#### How?
+#### How is useState?
 
 Well, if you started your application with `vite.js` just like we did on part 1,
 you might already see it implemented in the file called `App.jsx`.
@@ -291,7 +295,7 @@ And that's pretty much everything it does.
 
 ### useEffect
 
-#### What?
+#### What is useEffect?
 
 [`useEffect`](https://react.dev/reference/react/useEffect)
 is another basic hook that we can implement in our components.
@@ -323,8 +327,9 @@ In essence, the syntax is simple.
   - `[]` a dependency array.
     - If our component/code depends on some variable, change or some kind external execution, and when that variable changes we **need** to execute that array again, then this is the place where we put **that variable**. If the array is empty (it is in most cases), then `useEffect` will only run once. *If* and **when** the array is omitted, then `useEffect` will run after **every** render.
 
-#### How?
+#### How is useEffect?
 
+> Probably under-used tbh
 
 Let's add a simple `fetch` function to a new component. Make sure to import it in your `App.jsx`.
 
@@ -366,19 +371,21 @@ Since we don't want `useEffect` to execute multiple times calling our API over a
 
 That's pretty much everything about `useEffect`.
 
-
 ## Extras
 
 ### Advanced Hooks and practice
 
-Try the following exercise in your application
+Try the following exercise in your application:
 
-1. Make a component called `Astros.jsx`
-    - Give it the basic `jsx` structure and import it into `App.jsx`
-2. With the help of Hooks, do the following:
-    - Make an API call to the following API: [How many people are in space right now](http://open-notify.org/Open-Notify-API/People-In-Space/)
-    - If the link is dead (hopefully not), you can use the always available [PokeAPI](https://pokeapi.co/docs/v2)
-3. Now, with the data of your response, make a small card to either show the current *astros* or multiple *pokemon*. Check the corresponding API documentation on to how to access that specific data.
-    - If there are multiple people, you can use what we saw in the **Components** section to iterate through the array and get each object.
-
-4. GLHF
+- Make a component called `Astros.jsx`
+  - Give it the basic `jsx` structure and import it into `App.jsx`
+- With the help of Hooks, do the following:
+  - Make an API call to the following API:
+    - [How many people are in space right now](http://open-notify.org/Open-Notify-API/People-In-Space/)
+  - If the link is dead (hopefully not), you can use the always available [PokeAPI](https://pokeapi.co/docs/v2)
+- Now, with the data of your response:
+  - Make a small card to either show the current *astros* or multiple *pokemon*.
+  - Check the corresponding API documentation on to how to access that specific data.
+- If there are multiple people:
+  - You can use what we saw in the **Components** section to iterate through the array and get each object.
+-  GLHF
