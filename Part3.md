@@ -1,15 +1,20 @@
 # Part 3 - State
 
-# Table of Contents
-1. [State and lifecycle](#state-and-lifecycle)
-    - [State](#state)
-    - [Lifecycle](#lifecycle)
-2. [Hooks](#hooks)
-    - [Why?](#why?)
-    - [useState](#usestate)
-    - [useEffect](#useeffect)
-3. [Extras](#extras)
-    - [Advanced hooks and practice](#advanced-hooks-and-practice)
+## Table of Contents
+
+<!-- toc -->
+
+- [State and lifecycle](#state-and-lifecycle)
+  - [State](#state)
+  - [Lifecycle](#lifecycle)
+- [Hooks](#hooks)
+  - [Why?](#why)
+  - [useState](#usestate)
+  - [useEffect](#useeffect)
+- [Extras](#extras)
+  - [Advanced Hooks and practice](#advanced-hooks-and-practice)
+
+<!-- tocstop -->
 
 ## State and lifecycle
 
