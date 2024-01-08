@@ -103,7 +103,13 @@ and perhaps modify it a bit to make it work to your specifications.
 
 ### Usage and compatibility
 
-The usage you have for the components are more dependent of the type of app you're building.
-nd if they will do the trick for you. Remember to always measure twice before cutting, and keep things simple. This basically means to evaluate all the options at your disposal before interating them.
+The usage you have for the components depend of the app you're building.
+Remember to always measure twice before cutting, and keep things simple.
+This basically means to evaluate all the options at your disposal before integrating.
+If your app is a simple web site with zero or minimal dynamic content
+and works as a showcase/portfolio, perhaps neither `React` nor `MUI` is a good option.
 
-If your app is a simpler web site with little to zero dynamic content and is more of a showcase/portfolio, perhaps neither `React` nor `MUI` is a good option. `React` is an amazing library, however where it really shines is in applications that will probably scale up or have internal logic dependant on external non-controlled events/resources such as user events, inputs, API calls, etc...
+`React` is an amazing library,
+however where it really shines is inside applications
+that will probably scale up or have internal logic depend
+on external non-controlled events/resources such as user-events, API calls, etc...
