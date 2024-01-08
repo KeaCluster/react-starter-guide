@@ -1,10 +1,10 @@
 # Part 4 - Material UI implementation
 
-# Table of Contents
-1. [Installation](#installation)
-    - [Setup](#setup)
-2. [Implementation](#implementation)
-    - [Usage and compatibility](#usage-and-compatibility)
+## Table of Contents
+
+<!-- toc -->
+
+## About
 
 The use of a component library is very much used out there. Just how [Bootstrap](https://getbootstrap.com/) is often implemented for reponsiveness and quickness when building a site, there are libraries and collections of components available for React.
 
