@@ -4,9 +4,17 @@
 
 <!-- toc -->
 
+- [About](#about)
+- [Installation](#installation)
+  - [Setup](#setup)
+- [Implementation](#implementation)
+  - [Usage and compatibility](#usage-and-compatibility)
+
+<!-- tocstop -->
+
 ## About
 
-The use of a component library is very much used out there. Just how [Bootstrap](https://getbootstrap.com/) is often implemented for reponsiveness and quickness when building a site, there are libraries and collections of components available for React.
+The use of a component library is very much used out there. Just how [Bootstrap](https://getbootstrap.com/) is often implemented for responsiveness and quickness when building a site, there are libraries and collections of components available for React.
 
 One we could call *fundamental* would be [Material UI](https://mui.com/). 
 
