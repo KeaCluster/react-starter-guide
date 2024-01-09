@@ -106,7 +106,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ### Implementing
 
-- Define a route
+#### Define a route
 
 Let's skip the definition of a route, and just talk about what we need to define.
 Say you have a route that will showcase a Hero component and some other `Main` section.
@@ -170,55 +170,63 @@ Then, we'll declare the `views` that will be rendered for *each* `route`
 using the imported `<Route />` component.
 This component takes two basic attributes:
 
-- `element` defines the `view` that will be available for that `route`. This way, we can use only one component with multiple components inside.
+- `element` defines the `view` that will be available for that `route`.
+  - This way, we can use only one component with multiple components inside.
 - `path` defines the actual `route` with a simple String.
 
 ```jsx
 return (
-    <>
-        <Navbar links={links} />
-        <Routes>
-            <Route 
-                element={<Component />}
-                path='/route'
-            />
-        </Routes>
-    </>
+  <>
+    <Navbar links={links} />
+    <Routes>
+      <Route 
+        element={<Component />}
+        path='/route'
+      />
+    </Routes>
+  </>
 )
 ```
 
-
 Now, just customize it and add the other routes defined in your project.
 
+#### Define our links
 
-- Defining our links
-
-This part is a litte strange. Normally, to switch between routes inside a website/application we use the `<a>` tag with some `href` in it. And we can still use those with React. However, since `react-router-dom` is actually a SPA working as a MPA, we won't be switching `routes` as usual. So our `a` tags will become a `<Link />` component. Directly imported from the library.
+This part is a little strange.
+Normally, to switch between routes inside a website/application
+we use the `<a>` tag with some `href` in it.
+And we can still use those with React.
+However, since `react-router-dom` is actually a SPA working as a MPA,
+we won't be switching `routes` as usual.
+So our `a` tags will become a `<Link />` component directly imported from the library.
 
 Let's modify our `<Navbar />` to work with that component like so:
 
 ```jsx
 {
-    links.map((link, index) => (
-        <div key={index} className='navbar--link'>
-            <Link to={link.href}>{link.name}</Link>
-        </div>
-    ))
+  links.map((link, index) => (
+    <div key={index} className='navbar--link'>
+      <Link to={link.href}>{link.name}</Link>
+    </div>
+  ))
 }
 // remember that using index as a key is discouraged but not forbidden
 ```
 
-Quick small changes. `<Link />` works by letting the library know that this will reference one of the `path` attributes defined inside `App.jsx`. 
-    - `to` is an attribute that works just as `href`, but it won't reload the entire page in order to access that route. It will simply change to **that** `view` and refresh the DOM where necessary.
+Quick small changes. `<Link />` works by letting the library know that this will reference one of the `path` attributes defined inside `App.jsx`.
 
+- `to` is an attribute that works just as `href`
+  - But it won't reload the entire page in order to access that route.
+  - It will simply change to **that** `view` and refresh the DOM where necessary.
 
-And that's it basically. 
+And that's it basically.
 
 ## Extras
 
 ### Practice
 
 As an extra challenge, read the official docs and try the following:
-    - Research what the `*` wildcard is
-    - Try managing a `404` error with a custom `view`.
-    - How can you implement `state` to your `Navbar` component in order to add some functional styles and make the specific `Link` component be a different color to the others when inside that `route`.
+
+- Research what the `*` wildcard is
+- Try managing a `404` error with a custom `view`.
+- How can you implement `state` to your `Navbar` component in order to add some functional styles and make the specific `Link` component be a different color to the others when inside that `route`?
