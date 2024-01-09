@@ -20,30 +20,53 @@ So let's continue our journey and finally get that treasure.
 
 ## What is it
 
-[`React Router`](https://reactrouter.com/en/main) is another important and very useful library when managing routes inside our application. React adjusts perfectly to [SPA](https://medium.com/@theadkgroup/spa-vs-mpa-applications-what-are-the-differences-7dc004e62397) but if we're really trying to optimize our app to work as a MPA (while not being one), `React Router` is a great library that does just that. 
+[`React Router`](https://reactrouter.com/en/main)
+is another important and very useful library when managing routes inside our application.
+React adjusts perfectly to
+[SPAs](https://medium.com/@theadkgroup/spa-vs-mpa-applications-what-are-the-differences-7dc004e62397)
+but if we're really trying to make our app to work as a MPA (while not being one),
+`React Router` is a great library that does just that.
 
-What it does is very simple. Let's say you have an application that on `/` will showcase some projects you've done. This `Home` component showcases the projects, a small description about your company/something else and then some images bellow that will aid the user to have context of your app. The rest of the page, however, has a `navbar`, a `sidebar` and a `footer`. You want these components to be available in every single `page` of the app so we can *actually* reuse our components in different routes.
-
+What it does is very simple.
+Let's say you have an application where `/` will showcase some projects you've done.
+This `Home` component showcases the projects,
+a small description about your company or something else,
+and then some images bellow that will aid the user to have context of your app.
+The rest of the page, however, has a `navbar`,
+a `sidebar` and a `footer`.
+You want these components to be available in every single `page`
+of the app so we can *actually* reuse our components in different routes.
 
 ## Setup
 
-This is one of the few times where I differ from the direct docs. [`React Router`](https://reactrouter.com/en/main) is an impressive library but their documentation isn't very clear for readers unfamiliar with it or just new in general. We'll follow the installation process they provide as it is something simple, similar to `MUI`. However when implementing we'll take a simpler/quicker route. Not necessarilly different than the docs, but just simpler.
+This is one of the few times where I differ from the official docs.
+[`React Router`](https://reactrouter.com/en/main) is an impressive library,
+but their documentation isn't very clear for readers unfamiliar with it.
+
+We'll follow the installation process they provide as it is similar to `MUI`.
+However when implementing we'll take a simpler/quicker route.
+Not quite different than the docs, but just simpler.
 
 ### Installation
 
-Just run this command to add it as a dependency. The official docs have some additional commmands, but they're not needed in this implementation as we only want the basic functions of react-router. For further implementation and a complex functionality, read the docs. Check out how many different routes you can implement (Hash, Memory, Static, etc...) and keep practicing.
+Just run this command to add it as a dependency.
+The official docs have some additional commands,
+but they're not required for this implementation as we only want the basic functionality.
+For further implementation and a complex resulting app, read the docs.
+Check out how many different routes the library has (Hash, Memory, Static) and keep practicing.
 
 ```bash
-$ npm install react-router-dom
+npm install react-router-dom
 ```
 
 An then run your app as usual.
 
-##  Implementation
+## Implementation
 
 ### Modifications
 
-We'll need to modify a bit our `main.jsx` file. Currently, it should look like this:
+We'll need to modify a bit our `main.jsx` file.
+Currently, it should look like this:
 
 ```jsx
 import React from 'react'
@@ -52,14 +75,17 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 )
 ```
 
+Well, modifications are simple.
 
-Well, modifications are simple. We'll need to let our application know it'll work with a `<BrowserRouter>` component imported from `react-router-dom`. So, let's add it like so:
+We'll need to let our application know it'll work with a `<BrowserRouter>`
+component imported from `react-router-dom`.
+So, let's add it like so:
 
 
 ```jsx
