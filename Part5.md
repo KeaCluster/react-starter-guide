@@ -1,16 +1,22 @@
 # Part 5 - React Router DOM
 
-# Table of Contents
-1. [What is it?](#what-is-it)
-2. [Setup](#setup)
-    - [Installation](#installation)
-3. [Implementation](#implementation)
-    - [Modifications](#modifications)
-    - [Implementing](#implementing)
-4. [Extras](#extras)
-    - [Practice](#practice)
+## Table of Contents
 
-    We're almost at the end of this cruise. So let's continue our journey and get finally get that treasure.
+<!-- toc -->
+
+- [What is it](#what-is-it)
+- [Setup](#setup)
+  - [Installation](#installation)
+- [Implementation](#implementation)
+  - [Modifications](#modifications)
+  - [Implementing](#implementing)
+- [Extras](#extras)
+  - [Practice](#practice)
+
+<!-- tocstop -->
+
+We're almost at the end of this cruise.
+So let's continue our journey and finally get that treasure.
 
 ## What is it
 
