@@ -87,7 +87,6 @@ We'll need to let our application know it'll work with a `<BrowserRouter>`
 component imported from `react-router-dom`.
 So, let's add it like so:
 
-
 ```jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -105,12 +104,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-
 ### Implementing
 
 - Define a route
-    - Let's skip the definition of a route, and just talk about what we need to define. Let's say you have a `/` route that will only showcase a Hero component and some other `Main` section. The collection of **components** you're showcasing are called a `view`. So, we'll need to define a `view` for each route we need in our app. As we previously talked about, it's gonna be just three: `/`, `/about`, `/astros` (or `/pokemon` depending on your chosen API).
-    - Now that we have that settled, We'll add them to our `App.jsx` like so:
+
+Let's skip the definition of a route, and just talk about what we need to define.
+Say you have a route that will showcase a Hero component and some other `Main` section.
+The collection of **components** you're showcasing are called a `view`.
+So, we'll need to define a `view` for each route we need in our app.
+As we previously talked about,
+it's gonna be just three: `/`, `/about`, `/astros` (or `/pokemon` depending on your API).
+
+Now that we have that settled, We'll add them to our `App.jsx` like so:
 
 ```jsx
 // other imports
@@ -118,54 +123,55 @@ import {Route, Routes} from 'react-router-dom'
 
 
 const App = () => {
-    const links = [
-        { name: 'Home', href: '/'},
-        { name: 'About', href: '/about'},
-        { name: 'Astros', href: '/astros'}
+  const links = [
+    { name: 'Home', href: '/'},
+    { name: 'About', href: '/about'},
+    { name: 'Astros', href: '/astros'}
 
 
-    return (
-        <>
-            <Navbar links={links} />
-            <Routes> 
-                <Route
-                    element={<Hero title='Hello Space Pirate!' />}
-                    path='/'
-                />
-                <Route
-                    element={<About />}
-                    path='/about'
-                />
-                <Route
-                    element={<Astros />}
-                    path='/astros'
-                />
-            </Routes>
-        </>
-    )
+  return (
+    <>
+      <Navbar links={links} />
+      <Routes> 
+        <Route
+          element={<Hero title='Hello Space Pirate!' />}
+          path='/'
+        />
+        <Route
+          element={<About />}
+          path='/about'
+        />
+        <Route
+          element={<Astros />}
+          path='/astros'
+        />
+      </Routes>
+  </>
+  )
 }
 ```
 
-
 Let's explain this for a bit.
 First, we let `react-router-dom` know which components will be displayed regardless of the route. As an example, we're doing this by declaring `<Navbar />` component **outside** of the `<Routes />` component. This way our `Navbar` will be visible regardless or the route and it wont need to be reloaded into the DOM.
-    - `<Routes />` as of now indicates that the components inside it will be the ones changing.
 
+`<Routes />` as of now indicates that the components inside it will be the ones changing.
 
 ```jsx
 return (
-    <>
-        <Navbar links={links} />
-        <Routes>
-        </Routes>
-    </>
+  <>
+    <Navbar links={links} />
+    <Routes>
+    </Routes>
+  </>
 )
 ```
 
-Then, we'll declare the `views` that will be rendered for *each* `route` using the imported `<Route />` component.
-This component takes two basic attributes.
-    - `element` defines the `view` that will be available for that `route`. This way, we can use only one component with multiple components inside.
-    - `path` defines the actual `route` with a simple String.
+Then, we'll declare the `views` that will be rendered for *each* `route`
+using the imported `<Route />` component.
+This component takes two basic attributes:
+
+- `element` defines the `view` that will be available for that `route`. This way, we can use only one component with multiple components inside.
+- `path` defines the actual `route` with a simple String.
 
 ```jsx
 return (
