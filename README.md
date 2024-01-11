@@ -50,7 +50,6 @@ Feel free to navigate through each part. GLHF.
 ## Some aditional resources
 
 - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
-- [Estefania Cassigena - React desde cero](https://www.freecodecamp.org/espanol/news/aprende-react-desde-cero-curso-de-react-con-proyectos/)
 - [Joel Olawanle - Getting started React](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
 - [Jean-Marc Mockel - React Best Practices](https://www.freecodecamp.org/news/best-practices-for-react/)
 - [Ihechikara Vincent Abba - React Router v6](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
@@ -59,5 +58,7 @@ Feel free to navigate through each part. GLHF.
 
 ## Credits
 
-> This is still a WIP since React is an evolving library, alongside all the other subjects seen in this guide.
-> Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic gh pages theme.
+This is still a WIP since React is an evolving library,
+alongside all the other subjects seen in the guide.
+
+Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic gh pages theme.
