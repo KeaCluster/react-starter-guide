@@ -4,7 +4,7 @@ Check it out on your browser: [React starter guide](https://keacluster.github.io
 
 ## Updates
 
-- The last CRA guide is on the [CRA.md](./cra.md) file
+- The last CRA guide is inside the file [CRA.md](/cra.md)
 - This starter guide will move on to using [vite](https://vitejs.dev/)
   - It became the recommended tech to setup a basic React application.
 - Just a test.
@@ -61,4 +61,5 @@ Feel free to navigate through each part. GLHF.
 This is still a WIP since React is an evolving library,
 alongside all the other subjects seen in the guide.
 
-Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic gh pages theme.
+Additional thanks to [orderedlist](https://github.com/orderedlist)
+for the fantastic gh pages theme.
