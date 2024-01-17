@@ -53,7 +53,7 @@ Just run this command to add it as a dependency.
 The official docs have some additional commands,
 but they're not required for this implementation as we only want the basic functionality.
 For further implementation and a complex resulting app, read the docs.
-Check out how many different routes the library has (Hash, Memory, Static) and keep practicing.
+Check out different routes the library has (Hash, Memory, Static) and keep practicing.
 
 ```bash
 npm install react-router-dom
@@ -152,6 +152,7 @@ const App = () => {
 ```
 
 Let's explain this for a bit.
+
 First, we let `react-router-dom` know which components will be displayed regardless of the route. As an example, we're doing this by declaring `<Navbar />` component **outside** of the `<Routes />` component. This way our `Navbar` will be visible regardless or the route and it wont need to be reloaded into the DOM.
 
 `<Routes />` as of now indicates that the components inside it will be the ones changing.
