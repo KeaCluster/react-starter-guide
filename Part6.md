@@ -32,6 +32,25 @@ This allows us to verify the best practices when implementing new technologies.
   - I consider this an important subject as applications should follow the Web Content Accessibility Guidelines (WCAG)
   - Adding to this, certain software quality standards can help a lot.
 
-### Deployment
+## Deployment
+
+### Preparation
+
+Thanks to [vite's](https://vitejs.dev/guide/build) amazing docs,
+the process of building our application is very simple.
+
+A common practice is to have a branch specifically for production,
+where we can keep the final files ready for our server to use.
+
+We're going to add a new branch called `prod` to our project using `git`
+
+```sh
+git checkout -b prod
+```
+
+This should create a new branch as well as change to it.
+Once we're there, and we've made sure all final changes are in it
+(you can `git pull` to get them)
+The next step is to build our app.
 
 ## Resources
