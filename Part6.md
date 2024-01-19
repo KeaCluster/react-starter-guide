@@ -1,6 +1,17 @@
 # Part 6 - Adjustments and resources
 
 <!-- toc -->
+
+- [Adjustments](#adjustments)
+  - [Optimization](#optimization)
+- [Deployment](#deployment)
+  - [Preparation](#preparation)
+  - [Build](#build)
+- [This is it](#this-is-it)
+- [GL;HF](#glhf)
+
+<!-- tocstop -->
+
 ## Adjustments
 
 ### Optimization
@@ -53,4 +64,40 @@ Once we're there, and we've made sure all final changes are in it
 (you can `git pull` to get them)
 The next step is to build our app.
 
-## Resources
+### Build
+
+Vite has a built in command that does precisely this. Simply run it on your terminal:
+
+```sh
+vite build
+```
+
+And if that doesn't work:
+
+```sh
+npx vite build
+```
+
+After that, you will see different files created.
+The most important one, a `/dist` directory inside your project.
+
+Explore it for a bit.
+You will see that this directory has vanilla `js` and `css` files.
+This means no `jsx` or `.ts` scripts.
+
+After this step is done, the `/dist` directory will contain every single file parsed to vanilla web languages and tags that your browser can understand and render.
+
+Simply use any server or hosting server you prefer,
+and show the world your creation.
+
+## This is it
+
+As mentioned from the start, the purpose of this guide is to get you started in React.
+There are no [custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component),
+[React Redux](https://react-redux.js.org/) libraries or any of that stuff.
+
+Keep reading, building, creating and writing code that you enjoy.
+
+## GL;HF
+
+Thank you for reading.
