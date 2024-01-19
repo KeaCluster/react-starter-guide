@@ -60,8 +60,8 @@ git checkout -b prod
 ```
 
 This should create a new branch as well as change to it.
-Once we're there, and we've made sure all final changes are in it
-(you can `git pull` to get them)
+Once there, we should make sure all final changes are in it (you can `git pull`)
+
 The next step is to build our app.
 
 ### Build
@@ -88,7 +88,7 @@ This means no `jsx` or `.ts` scripts.
 After this step is done, the `/dist` directory will contain every single file parsed to vanilla web languages and tags that your browser can understand and render.
 
 Simply use any server or hosting server you prefer,
-and show the world your creation.
+and show the world your creation by publishing its content.
 
 ## This is it
 
