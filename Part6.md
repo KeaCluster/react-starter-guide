@@ -1,5 +1,6 @@
 # Part 6 - Adjustments and resources
 
+<!-- toc -->
 ## Adjustments
 
 ### Optimization
