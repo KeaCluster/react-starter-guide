@@ -5,6 +5,33 @@
 
 ### Optimization
 
+There are multiple things that we can add but people have different views on them.
+
+For example, [memoization](https://react.dev/reference/react/memo)
+is an existing concept of computer science and software engineering.
+This technique is used to speed up programs by storing the result of heavy function calls.
+This makes that result reusable if the same input occurs.
+It basically means *creating a memory of precomputed values* in order to optimize.
+However the adjustments for this change would require further reading and investigation.
+
+Another technique involved would be [lazy loading](https://react.dev/reference/react/lazy#lazy).
+This allows us to implement promises (a common js practice) to render a component.
+Which can come in handy when, and where, large files like images are involved.
+
+Adding to all of this.
+Almost every library and/or module implemented has its own documentation.
+This allows us to verify the best practices when implementing new technologies.
+(Material UI && React Router).
+
+- Keep testing and debugging your code.
+- Implement code-splitting to break down the app into smaller blocks of code.
+- Optimize your dependencies and remove unused libraries/ packages.
+- State Management and its proper implementation can result in significant improvements regarding performance.
+- Accessibility.
+  - I consider this an important subject as applications should follow the Web Content Accessibility Guidelines (WCAG)
+  - Adding to this, certain software quality standards can help a lot.
+
+
 ### Deployment
 
 ## Resources
