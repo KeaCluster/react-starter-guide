@@ -15,7 +15,8 @@ It basically means *creating a memory of precomputed values* in order to optimiz
 However the adjustments for this change would require further reading and investigation.
 
 Another technique involved would be [lazy loading](https://react.dev/reference/react/lazy#lazy).
-This allows us to implement promises (a common js practice) to render a component.
+This allows us to implement [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+Which are a common js practice, to render a component.
 Which can come in handy when, and where, large files like images are involved.
 
 Adding to all of this.
@@ -30,7 +31,6 @@ This allows us to verify the best practices when implementing new technologies.
 - Accessibility.
   - I consider this an important subject as applications should follow the Web Content Accessibility Guidelines (WCAG)
   - Adding to this, certain software quality standards can help a lot.
-
 
 ### Deployment
 
