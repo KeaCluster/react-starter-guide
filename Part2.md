@@ -272,7 +272,7 @@ const Navbar = ({links}) => {
             <div class='nav--links'>
                 {
                     links.map((link, index) => (
-                        <a class='nav--link' key='index'>{link.name}</a>
+                        <a class='nav--link' key={index}> {link.name}</a>
                     ))
                 }
             </div>
