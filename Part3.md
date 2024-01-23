@@ -357,7 +357,9 @@ function Card() {
     }, []); // Empty array -> useEffect will run only once
     return (
         <div>
-            {data ? <div>Data: {JSON.stringify(data)}</div> : 'Loading...'}
+            {
+              data ? <div>Data: {data} </div> : 'Loading...'
+            }
         </div>
     )
 }
@@ -388,4 +390,4 @@ Try the following exercise in your application:
   - Check the corresponding API documentation on to how to access that specific data.
 - If there are multiple people:
   - You can use what we saw in the **Components** section to iterate through the array and get each object.
--  GLHF
+- GLHF
