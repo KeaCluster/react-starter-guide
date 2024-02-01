@@ -101,7 +101,7 @@ Sometimes there is the case where the state of a component isn't necessarily wel
   - Allows us to have control over our state in a more straightforward manner.
   - The syntax is quite simple.
 
-```jsx
+```js
 const [state, setState] = useState(initialState);
 ```
 
@@ -122,7 +122,7 @@ You can read more about it on the docs.
 Well, if you started your application with `vite.js` just like we did on part 1,
 you might already see it implemented in the file called `App.jsx`.
 
-```jsx
+```js
 import { useState } from 'react';
 
 function App() {
@@ -146,7 +146,7 @@ function App() {
 
 Notice that we need to import `useState` from the React library and that the declaration inside the component gives **context** about what that state is used for. In this case, for a counter that will be updated by +1 each time the button is pressed
 
-```jsx
+```js
 onClick={() => setCount(count + 1)}
 ```
 
@@ -158,7 +158,7 @@ Inside it, we simply add `+1` to our current state.
 We can also set state with something called a `handler` function.
 Which are small custom functions that aid in the *handling* of our state:
 
-```jsx
+```js
 import { useState } from 'react';
 
 function App() {
@@ -192,7 +192,7 @@ But don't worry, we'll sail to that island when the time comes.
 
 Here's another implementation of state:
 
-```jsx
+```js
 import React, { useState } from 'react';
 
 function ItemList() {
@@ -256,7 +256,7 @@ Try this component out inside your project. Figure out what it does.
   - `handleDelete` is rather simple. All it does is filter through the current items in state, and returns to `setItems()` the ones that **don't** match the current `id`. This way, we can delete an item from our array of items without any complex functions.
   - `handleEdit` is a mix between the previous both so let's look at it with more care:
 
-```jsx
+```js
 const handleEdit = (id, newText) => {
     // code here
 }
@@ -264,7 +264,7 @@ const handleEdit = (id, newText) => {
 
 Simply declares the function and sets its parameters.
 
-```jsx
+```js
 const handleEdit = (id, newText) => {
     setItems(items.map(item => ()))
 }
@@ -272,7 +272,7 @@ const handleEdit = (id, newText) => {
 
 So far, we only declare that `setItems` will have as parameter the *return* data of `items.map(item => ())`
 
-```jsx
+```js
 const handleEdit = (id, newText) => {
     setItems(items.map(item => (item.id === id ? { ...item, text: newText } : item)));
 }
@@ -313,7 +313,7 @@ To simplify things, this hook comes into play when **other** APIs,
 external data or manual override of the component happen.
 However, the implementation is quite simple.
 
-```jsx
+```js
 useEffect(() => {
   // logic here
 }, [])
@@ -335,7 +335,7 @@ Let's add a simple `fetch` function to a new component. Make sure to import it i
 
 As mentioned before, the data *fetched* from the API comes from an external third party source, so it's an excellent place to implement `useEffect`.
 
-```jsx
+```js
 import { useEffect, useState } from 'react';
 
 function Card() {
@@ -354,7 +354,7 @@ function Card() {
 
         fetchData();
 
-    }, []); // Empty array -> useEffect will run only once
+    }, []);
     return (
         <div>
             {

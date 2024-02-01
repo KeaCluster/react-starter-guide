@@ -68,7 +68,7 @@ An then run your app as usual.
 We'll need to modify a bit our `main.jsx` file.
 Currently, it should look like this:
 
-```jsx
+```js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
@@ -87,7 +87,7 @@ We'll need to let our application know it'll work with a `<BrowserRouter>`
 component imported from `react-router-dom`.
 So, let's add it like so:
 
-```jsx
+```js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'; // add this line to import it
@@ -117,7 +117,7 @@ it's gonna be just three: `/`, `/about`, `/astros` (or `/pokemon` depending on y
 
 Now that we have that settled, We'll add them to our `App.jsx` like so:
 
-```jsx
+```js
 // other imports
 import {Route, Routes} from 'react-router-dom'
 
@@ -157,7 +157,7 @@ First, we let `react-router-dom` know which components will be displayed regardl
 
 `<Routes />` as of now indicates that the components inside it will be the ones changing.
 
-```jsx
+```js
 return (
   <>
     <Navbar links={links} />
@@ -175,7 +175,7 @@ This component takes two basic attributes:
   - This way, we can use only one component with multiple components inside.
 - `path` defines the actual `route` with a simple String.
 
-```jsx
+```js
 return (
   <>
     <Navbar links={links} />
@@ -203,7 +203,7 @@ So our `a` tags will become a `<Link />` component directly imported from the li
 
 Let's modify our `<Navbar />` to work with that component like so:
 
-```jsx
+```js
 {
   links.map((link, index) => (
     <div key={index} className='navbar--link'>

@@ -64,7 +64,7 @@ There are three main sections of a component that we should always take in mind.
 
   - The **Return** section of a component is the part there the `html` nodes will be declared and returned. And while multiple nodes can be returned, there should **always** be a single top level node to surround the child elements.
 
-```jsx
+```js
 function Button() {
     const greeting = 'Hello pirate!';
     return (
@@ -83,7 +83,7 @@ Well, pretty simple in fact. All you need to do is export the component from it'
 
     - Importing `Button` component inside `App`
 
-```jsx
+```js
 
 import Button from './Components/Button.jsx'
 
@@ -100,7 +100,7 @@ And that's it really. Whenever you want to use a component just make sure you're
 
 This is a class component
 
-```jsx
+```js
 class Button extends React.Component {
     const greeting = 'Hello Pirate!';
     render() {
@@ -139,7 +139,7 @@ Well, it starts with very simple code.
 
 1. Create a component called `Hero.jsx` inside your *Components* directory. And write the code like so:
 
-```jsx
+```js
 const Hero = () => {
     return (
         <h1>Hello pirate!</h1>
@@ -151,7 +151,7 @@ export default Hero;
 
 2. Now import it inside `App.jsx`
 
-```jsx
+```js
 import Hero from './Components/Hero.jsx'
 
 function App() {
@@ -165,7 +165,7 @@ function App() {
 
 3. So let's switch it up by making the parent component `App.jsx` send some `props` into its child component:
 
-```jsx
+```js
 import Hero from './Components/Hero.jsx'
 
 function App() {
@@ -177,7 +177,7 @@ function App() {
 
 4. And now accept `props` into the child component and have it render inside the `<h1>` tag by inserting the object.
 
-```jsx
+```js
 
 // Remember that a component is just a function, and properties are received through paremeters
 const Hero = (props) => {
@@ -192,7 +192,7 @@ export default Hero;
 **Q:** But what is actually inside props?  
 **A:** Well, log it out!
 
-```jsx
+```js
 const Hero = (props) => {
     // study this output
     console.log(props);
@@ -243,7 +243,7 @@ Now, inside `App.jsx` insert the following code:
 
 - Remember to import the component
 
-```jsx
+```js
 const App = () => {
     const links = [
         { name: 'Home', href: '/'}
@@ -262,7 +262,7 @@ const App = () => {
 
 3. And with the use of the previously seen `props`, render all the links:
 
-```jsx
+```js
 const Navbar = ({links}) => {
     return (
         <nav>
