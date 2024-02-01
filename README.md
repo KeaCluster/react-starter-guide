@@ -4,9 +4,8 @@ Check it out on your browser: [React starter guide](https://keacluster.github.io
 
 ## Updates
 
-- The last CRA guide is inside the file [CRA.md](/cra.md)
-- This starter guide will move on to using [vite](https://vitejs.dev/)
-  - It became the recommended tech to setup a basic React application.
+- This starter guide uses [vite](https://vitejs.dev/)
+  - It became the recommended tech to setup a basic React application after CRA.
 - Just a test.
   - There are better guides with better docs out there so don't stick to just this.
 

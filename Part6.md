@@ -92,7 +92,7 @@ and show the world your creation by publishing its content.
 
 ## This is it
 
-As mentioned from the start, the purpose of this guide is to get you started in React.
+As mentioned from the start, the purpose of this guide is to get you started with React.
 There are no [custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component),
 [React Redux](https://react-redux.js.org/) libraries or any of that stuff.
 
