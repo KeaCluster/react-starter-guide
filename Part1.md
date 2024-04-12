@@ -1,31 +1,34 @@
-# Part 1 - Setup, structure and basic info
+# Part 1 - Setup structure and basic info
 
-<!-- toc -->
+<!--toc:start-->
 
-- [Project Initialization with Vite.js](#project-initialization-with-vitejs)
-- [Directory Structure](#directory-structure)
-  - [Structure information](#structure-information)
-    - [Files](#files)
-- [Introduction to React](#introduction-to-react)
-  - [Vite is not React](#vite-is-not-react)
-  - [React as a library](#react-as-a-library)
-- [DOM and Virtual DOM](#dom-and-virtual-dom)
-- [JSX](#jsx)
-  - [What's on the files?](#whats-on-the-files)
+- [Part 1 - Setup structure and basic info](#part-1-setup-structure-and-basic-info)
+  - [Project Initialization with Vite.js](#project-initialization-with-vitejs)
+  - [Directory Structure](#directory-structure)
+    - [Structure information](#structure-information)
+      - [Files](#files)
+  - [Introduction to React](#introduction-to-react)
+    - [Vite is not React](#vite-is-not-react)
+    - [React as a library](#react-as-a-library)
+  - [DOM and Virtual DOM](#dom-and-virtual-dom)
+  - [JSX](#jsx)
+    - [What's on the files?](#whats-on-the-files)
 
-<!-- tocstop -->
+<!--toc:end-->
 
 We'll go through the steps to initialize a React project (No TS) using Vite.js.
 
 ## Project Initialization with Vite.js
 
 1. **Install Node.js**:
-    - Ensure you have [Node.js](https://nodejs.org/en/) installed.
-    - Vite requires Node.js version 12.0.0 or higher.
-        - The latest stable release (LST) is always recommended.
-        - Remember that with Node.js npm should also be included.
+
+   - Ensure you have [Node.js](https://nodejs.org/en/) installed.
+   - Vite requires Node.js version 12.0.0 or higher.
+     - The latest stable release (LST) is always recommended.
+     - Remember that with Node.js npm should also be included.
 
 2. **Create a new project**:
+
    - Open your terminal and run the following command to create a new project:
 
      ```bash
@@ -35,16 +38,18 @@ We'll go through the steps to initialize a React project (No TS) using Vite.js.
      Replace `my-react-app` with the desired project name.
 
      - Make sure to select the proper options when running the command.
-        - If on windows, try executing the command on `cmd` or `git bash`.
-        - Sometimes either won't allow the use of arrow keys for selection.
 
-        - First selection: **React**
-        - Second: **Javascript**
+       - If on windows, try executing the command on `cmd` or `git bash`.
+       - Sometimes either won't allow the use of arrow keys for selection.
 
-    If you select any other option,
-    remember that the simplest soltion at this point can be to start over.
+       - First selection: **React**
+       - Second: **Javascript**
+
+   If you select any other option,
+   remember that the simplest soltion at this point can be to start over.
 
 3. **Navigate to your project directory**:
+
    - Once the project is created, navigate to the project directory:
 
      ```bash
@@ -52,24 +57,27 @@ We'll go through the steps to initialize a React project (No TS) using Vite.js.
      ```
 
 4. **Install dependencies**:
+
    - Install any necessary dependencies using npm.
-        - This command is only necessary for the initial setup
+
+     - This command is only necessary for the initial setup
 
      ```bash
      npm install
      ```
 
 5. **Start the development server**:
+
    - Now, start the development server:
 
      ```bash
      npm run dev
      ```
 
-    This command will start the Vite development server.
-    You should be able to see your new React app running at [http://localhost:\$PORT](http://localhost:$PORT).
-    Change the `$PORT` space to adjust to the port `vite.js` just gave you.
-    (It's always on display on your terminal)
+   This command will start the Vite development server.
+   You should be able to see your new React app running at [http://localhost:\$PORT](http://localhost:$PORT).
+   Change the `$PORT` space to adjust to the port `vite.js` just gave you.
+   (It's always on display on your terminal)
 
 6. **Inspecting the project**
 
@@ -106,11 +114,12 @@ Below is the directory structure for our React project initialized with Vite.js.
 
 ### Structure information
 
-As with any project using *vite*, the moment you init, a directory is created.
+As with any project using _vite_, the moment you init, a directory is created.
 It's Important to identify the structure of the project inside this `root` directory.
-It's where all the magic happens &  where the rest of the development will occur.
+It's where all the magic happens & where the rest of the development will occur.
 
 - `/root` isn't really called root.
+
   - This is a way of calling the main directory where our project is saved.
   - This directory should have the name of your application.
 
@@ -124,9 +133,9 @@ It's where all the magic happens &  where the rest of the development will occur
 
 #### Files
 
-- `App.jsx` is the main file to host all of the application's *main* components.
+- `App.jsx` is the main file to host all of the application's _main_ components.
   - While it should end up relatively small in size and in loc,
-  Its where all of our components meet.
+    Its where all of our components meet.
 - `App.css` and it's structure will vary depending on how the project's styles are managed. Different frameworks work with different methods, and the source to make a decision regarding style handling inside our React application comes from it's requirements.
   - `index.css` is a simple yet efficient css file just like any other.
   - `main.jsx` is a simple yet important `.jsx` file.
@@ -160,7 +169,7 @@ since they have plenty more freedom to customize their project,
 and only have what they'll really need in order to make their application work.
 This optimizes their development environment,
 as well as their final product.
-Since this is a *test*, we won't be going that route as you might've noticed.
+Since this is a _test_, we won't be going that route as you might've noticed.
 
 React alongside several modules will give us necessary tools to develop
 (and build) a small ~~stable~~ application to showcase what we've learned.
@@ -236,7 +245,7 @@ To be more precise, it doesn't do that at all. How react actually works is by im
   - This results in the need for a transpiler tool such as Babel.
   - In this 'automated' process, JSX elements turn into regular JS with the help of `React.createElement()` function calls.
 - Component declaration.
-  - JSX is used as the usual way to declare components in react. 
+  - JSX is used as the usual way to declare components in react.
   - This makes it a standard throughout applications.
 
 Some JSX example:
@@ -244,13 +253,13 @@ Some JSX example:
 ```jsx
 // declare a component which returns the jsx data
 const component = (
-<div>
-<h1>Hello, pirate!</h1>
-<p>Can you eye the difference between html and jsx?</p>
-</div>
-)
+  <div>
+    <h1>Hello, pirate!</h1>
+    <p>Can you eye the difference between html and jsx?</p>
+  </div>
+);
 
 // Uses magic functions and renders inside the root element of an html document.
 
-ReactDOM.render(component, document.getElementById('root'))
+ReactDOM.render(component, document.getElementById("root"));
 ```

@@ -1,19 +1,20 @@
 # Part 5 - React Router DOM
 
-## Table of Contents
+<!--toc:start-->
 
-<!-- toc -->
+- [Part 5 - React Router DOM](#part-5-react-router-dom)
+  - [What is it](#what-is-it)
+  - [Setup](#setup)
+    - [Installation](#installation)
+  - [Implementation](#implementation)
+    - [Modifications](#modifications)
+    - [Implementing](#implementing)
+      - [Define a route](#define-a-route)
+      - [Define our links](#define-our-links)
+  - [Extras](#extras)
+    - [Practice](#practice)
 
-- [What is it](#what-is-it)
-- [Setup](#setup)
-  - [Installation](#installation)
-- [Implementation](#implementation)
-  - [Modifications](#modifications)
-  - [Implementing](#implementing)
-- [Extras](#extras)
-  - [Practice](#practice)
-
-<!-- tocstop -->
+<!--toc:end-->
 
 We're almost at the end of this cruise.
 So let's continue our journey and finally get that treasure.
@@ -35,7 +36,7 @@ and then some images bellow that will aid the user to have context of your app.
 The rest of the page, however, has a `navbar`,
 a `sidebar` and a `footer`.
 You want these components to be available in every single `page`
-of the app so we can *actually* reuse our components in different routes.
+of the app so we can _actually_ reuse our components in different routes.
 
 ## Setup
 
@@ -69,16 +70,16 @@ We'll need to modify a bit our `main.jsx` file.
 Currently, it should look like this:
 
 ```jsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);
 ```
 
 Well, modifications are simple.
@@ -88,20 +89,20 @@ component imported from `react-router-dom`.
 So, let's add it like so:
 
 ```jsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'; // add this line to import it
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom"; // add this line to import it
+import App from "./App.jsx";
+import "./index.css";
 
-// implement it like so: 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>
-)
+// implement it like so:
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);
 ```
 
 ### Implementing
@@ -132,7 +133,7 @@ const App = () => {
   return (
     <>
       <Navbar links={links} />
-      <Routes> 
+      <Routes>
         <Route
           element={<Hero title='Hello Space Pirate!' />}
           path='/'
@@ -161,13 +162,12 @@ First, we let `react-router-dom` know which components will be displayed regardl
 return (
   <>
     <Navbar links={links} />
-    <Routes>
-    </Routes>
+    <Routes></Routes>
   </>
-)
+);
 ```
 
-Then, we'll declare the `views` that will be rendered for *each* `route`
+Then, we'll declare the `views` that will be rendered for _each_ `route`
 using the imported `<Route />` component.
 This component takes two basic attributes:
 
@@ -180,13 +180,10 @@ return (
   <>
     <Navbar links={links} />
     <Routes>
-      <Route 
-        element={<Component />}
-        path='/route'
-      />
+      <Route element={<Component />} path="/route" />
     </Routes>
   </>
-)
+);
 ```
 
 Now, just customize it and add the other routes defined in your project.
@@ -206,10 +203,10 @@ Let's modify our `<Navbar />` to work with that component like so:
 ```jsx
 {
   links.map((link, index) => (
-    <div key={index} className='navbar--link'>
+    <div key={index} className="navbar--link">
       <Link to={link.href}>{link.name}</Link>
     </div>
-  ))
+  ));
 }
 // remember that using index as a key is discouraged but not forbidden
 ```

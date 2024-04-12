@@ -1,30 +1,26 @@
 # Part 4 - Material UI implementation
 
-## Table of Contents
+<!--toc:start-->
 
-<!-- toc -->
+- [Part 4 - Material UI implementation](#part-4-material-ui-implementation)
+  - [Installation](#installation)
+    - [Setup](#setup)
+  - [Implementation](#implementation)
+    - [Usage and compatibility](#usage-and-compatibility)
 
-- [About](#about)
-- [Installation](#installation)
-  - [Setup](#setup)
-- [Implementation](#implementation)
-  - [Usage and compatibility](#usage-and-compatibility)
-
-<!-- tocstop -->
-
-## About
+<!--toc:end-->
 
 The use of a component library is very much used out there.
 Just how [Bootstrap](https://getbootstrap.com/) is often
 implemented for responsiveness and quickness when building a site,
 there are libraries and collections of components available for React.
 
-One we could call *fundamental* would be [Material UI](https://mui.com/).
+One we could call _fundamental_ would be [Material UI](https://mui.com/).
 
 Since the library is in constant change, as with anything else,
 the main source for support we could have are the amazing source
 [docs](https://mui.com/material-ui/).
-Take in mind, `MUI` isn't the only library available inside the *Material* environment.
+Take in mind, `MUI` isn't the only library available inside the _Material_ environment.
 There's also `Joy UI`, `Base UI` and `MUI System`.
 You can check the docs for more info on those.
 Maybe on your project `Base UI` will be enough to to work.
@@ -73,9 +69,9 @@ now we should have the follwing lines in our `package.json`
     "@emotion/react": "^X.x.x",
     "@emotion/styled": "^X.x.x",
     "@mui/icons-material": "^X.x.x",
-    "@mui/material": "^X.x.x",
-      // or here
-  },
+    "@mui/material": "^X.x.x"
+    // or here
+  }
 }
 ```
 

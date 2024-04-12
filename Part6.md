@@ -1,16 +1,17 @@
 # Part 6 - Adjustments and resources
 
-<!-- toc -->
+<!--toc:start-->
 
-- [Adjustments](#adjustments)
-  - [Optimization](#optimization)
-- [Deployment](#deployment)
-  - [Preparation](#preparation)
-  - [Build](#build)
-- [This is it](#this-is-it)
-- [GL;HF](#glhf)
+- [Part 6 - Adjustments and resources](#part-6-adjustments-and-resources)
+  - [Adjustments](#adjustments)
+    - [Optimization](#optimization)
+  - [Deployment](#deployment)
+    - [Preparation](#preparation)
+    - [Build](#build)
+  - [This is it](#this-is-it)
+  - [GL;HF](#glhf)
 
-<!-- tocstop -->
+<!--toc:end-->
 
 ## Adjustments
 
@@ -22,7 +23,7 @@ For example, [memoization](https://react.dev/reference/react/memo)
 is an existing concept of computer science and software engineering.
 This technique is used to speed up programs by storing the result of heavy function calls.
 This makes that result reusable if the same input occurs.
-It basically means *creating a memory of precomputed values* in order to optimize.
+It basically means _creating a memory of precomputed values_ in order to optimize.
 However the adjustments for this change would require further reading and investigation.
 
 Another technique involved would be [lazy loading](https://react.dev/reference/react/lazy#lazy).
