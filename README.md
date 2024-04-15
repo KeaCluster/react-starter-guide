@@ -2,7 +2,7 @@
 
 Check it out on your browser: [React starter guide](https://keacluster.github.io/react-starter-guide/)
 
-[!NOTE]
+> [!NOTE]
 > No Create-React-App
 
 ## Intro
@@ -39,6 +39,9 @@ Feel free to navigate through each part. GLHF.
 
 ## Some aditional resources
 
+> [!TIP]
+> Try checking these out while or after finishing this guide
+
 - [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
 - [Joel Olawanle - Getting started React](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
 - [Jean-Marc Mockel - React Best Practices](https://www.freecodecamp.org/news/best-practices-for-react/)
@@ -48,6 +51,4 @@ Feel free to navigate through each part. GLHF.
 
 ## Other stuff
 
-[!Important]
-Additional thanks to [orderedlist](https://github.com/orderedlist)
-for the fantastic gh pages theme.
+> Additional thanks to [orderedlist](https://github.com/orderedlist) for the fantastic gh pages theme.
