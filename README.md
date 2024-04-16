@@ -10,6 +10,7 @@ Check it out on your browser: [React starter guide](https://keacluster.github.io
 This guide will walk you through setting up a React project using [Vite.js](https://vitejs.dev/)
 as an alternative to Create-React-App (CRA).
 This guide is structured in a way to introduce you to essential concepts.
+Keep in mind the best resource for React is always their [official docs](https://react.dev/)
 
 - [Part 1: Project Setup, Structure and Basic React Info](./Part1.md)
   - Project Initialization with Vite.js
@@ -42,12 +43,11 @@ Feel free to navigate through each part. GLHF.
 > [!TIP]
 > Try checking these out while or after finishing this guide
 
-- [Eve Porcello - React Essential Training](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
-- [Joel Olawanle - Getting started React](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)
-- [Jean-Marc Mockel - React Best Practices](https://www.freecodecamp.org/news/best-practices-for-react/)
-- [Ihechikara Vincent Abba - React Router v6](https://www.freecodecamp.org/news/how-to-use-react-router-version-6/)
-- [Reed Barger - React Router Cheatsheet](https://www.freecodecamp.org/news/react-router-cheatsheet/)
-- [Understanding Functional Components vs Class Components](https://www.twilio.com/blog/react-choose-functional-components)
+- [Eve Porcello - React Essential Training (2022)](https://www.linkedin.com/learning/react-js-essential-training-14836121?u=100575394)
+- [PedroTech - ReactJS Course (2023)](https://www.youtube.com/watch?v=U2Wltnv-doo&list=PLpPqplz6dKxW5ZfERUPoYTtNUNvrEebAR)
+- [Ihechikara Abba - React Best Practices to up your game (2024)](https://kinsta.com/blog/react-best-practices/)
+- [Reed Barger - React Router Cheatsheet (2021)](https://www.freecodecamp.org/news/react-router-cheatsheet/)
+- [GeeksforGeeks - Functional vs Class components (2023)](https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components/)
 
 ## Other stuff
 
